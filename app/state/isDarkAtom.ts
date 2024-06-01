@@ -5,7 +5,7 @@ let theme =
     ? window.matchMedia("(prefers-color-scheme: dark)").matches
     : true;
 
-export const isDarkAtom = atom<string>({
+export const isDarkAtom = atom<boolean>({
   key: "isDark",
-  default: theme ? "dark" : "light",
+  default: true,
 });

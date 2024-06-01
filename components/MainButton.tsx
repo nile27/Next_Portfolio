@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import { useRecoilValue, useRecoilState } from "recoil";
-import { isDarkAtom } from "../state/isDarkAtom";
+import { useRecoilValue } from "recoil";
+import { isDarkAtom } from "@/app/state/isDarkAtom";
+
 import { cva } from "class-variance-authority";
 import { cn } from "../lib/utill";
 
@@ -32,17 +33,13 @@ const buttonVariants = cva(`p-2 rounded`, {
 });
 
 const MainButton = (props: TMainButton) => {
-  const [isDark, setIsDark] = useRecoilState(isDarkAtom);
-  const color = useRecoilValue(isDarkAtom) as "dark" | "light" | "default";
-
+  const isDark = useRecoilValue(isDarkAtom);
   const { children, size, ...restBtnProps } = props;
+  const color = isDark ? "dark" : "light";
+
   return (
     <button
       {...restBtnProps}
-      onClick={() => {
-        let isBool = isDark === "light" ? "dark" : "light";
-        setIsDark(isBool);
-      }}
       className={cn(
         buttonVariants({ size, color }),
         `cursor-pointer flex justify-center items-center rounded-full text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 font-mono `
