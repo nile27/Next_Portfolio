@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { isDarkAtom } from "@/app/state/isDarkAtom";
+import { useTheme } from "next-themes";
 
 import { cva } from "class-variance-authority";
 import { cn } from "../lib/utill";
@@ -27,6 +28,7 @@ const buttonVariants = cva(`p-2 rounded`, {
 
 const ThemeToggleButton = () => {
   const [isDark, setIsDark] = useRecoilState(isDarkAtom);
+  const { theme, setTheme } = useTheme();
   const color = isDark ? "dark" : "light";
 
   const handleScroll = () => {
@@ -37,17 +39,25 @@ const ThemeToggleButton = () => {
       behavior: "smooth",
     });
   };
-
+  const handleTheme = () => {
+    let systemTheme = !isDark ? "dark" : "light";
+    setIsDark(!isDark);
+    setTheme(systemTheme);
+  };
   return (
     <div className=" fixed bottom-9 right-9  flex justify-center items-center gap-2 flex-col">
       <button
-        onClick={() => setIsDark(!isDark)}
+        onClick={handleTheme}
         className={cn(
           buttonVariants({ color }),
           `cursor-pointer flex justify-center items-center rounded-full w-[50px] h-[50px] text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 font-mono`
         )}
       >
-        <Image src={sun} alt="light" />
+        {isDark ? (
+          <Image src={sun} alt="light" />
+        ) : (
+          <Image src={moon} alt="dark" />
+        )}
       </button>
       <button
         onClick={handleScroll}

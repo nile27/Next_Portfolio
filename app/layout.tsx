@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Viewport } from "next";
 import { Noto_Sans } from "next/font/google";
 import RecoilRootWrapper from "./RecoilWrapper";
+import { ThemeProvider } from "@/components/Provider";
 
 import "./globals.css";
 
@@ -27,8 +28,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSansKr.variable}`}>
-        <RecoilRootWrapper>{children}</RecoilRootWrapper>
+      <body className={`${notoSansKr.variable} `}>
+        <RecoilRootWrapper>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </RecoilRootWrapper>
       </body>
     </html>
   );
