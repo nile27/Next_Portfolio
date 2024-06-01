@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
+import RecoilRootWrapper from "./RecoilWrapper";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSansKr = Noto_Sans({
+  subsets: ["latin"],
+  variable: "--noto_sans",
+  weight: ["100", "400", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${notoSansKr.variable}`}>
+        <RecoilRootWrapper>{children}</RecoilRootWrapper>
+      </body>
     </html>
   );
 }
