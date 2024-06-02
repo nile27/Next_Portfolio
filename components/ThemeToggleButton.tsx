@@ -28,7 +28,7 @@ const buttonVariants = cva(`p-2 rounded`, {
 
 const ThemeToggleButton = () => {
   const [isDark, setIsDark] = useRecoilState(isDarkAtom);
-  const { theme, setTheme } = useTheme();
+
   const color = isDark ? "dark" : "light";
 
   const handleScroll = () => {
@@ -42,10 +42,9 @@ const ThemeToggleButton = () => {
   const handleTheme = () => {
     let systemTheme = !isDark ? "dark" : "light";
     setIsDark(!isDark);
-    setTheme(systemTheme);
   };
   return (
-    <div className=" fixed bottom-9 right-9  flex justify-center items-center gap-2 flex-col">
+    <div className=" fixed bottom-9 right-9  flex justify-center items-center gap-2 flex-col z-10">
       <button
         onClick={handleTheme}
         className={cn(

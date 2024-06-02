@@ -1,11 +1,20 @@
 import { atom } from "recoil";
+import { recoilPersist } from "recoil-persist";
 
-let theme =
-  typeof window !== "undefined"
-    ? window.matchMedia("(prefers-color-scheme: dark)").matches
-    : true;
+const Window: (Window & typeof globalThis) | undefined =
+  typeof window !== "undefined" ? window : undefined;
+let theme = Window && Window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-export const isDarkAtom = atom<boolean>({
+console.log(theme);
+const sessionStorage = Window && Window.sessionStorage;
+//   typeof window !== "undefined" ? window.sessionStorage : undefined;
+
+const { persistAtom } = recoilPersist({
   key: "isDark",
-  default: true,
+  storage: Window?.sessionStorage,
+});
+export const isDarkAtom = atom<boolean>({
+  key: "isDarkKey",
+  default: theme,
+  effects_UNSTABLE: [persistAtom],
 });

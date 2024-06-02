@@ -17,11 +17,18 @@ body {
   :root {
     font-family: "Noto Sans KR", sans-serif;
     --vh: 100%;
-    --background: #e7e7e9;
+    --background: red;
     --text-color: #000;
+
+    span {
+      --text-color: #000;
+    }
   }
   .dark {
     --background: #16161a;
     --text-color: #fff;
+    span {
+      --text-color: #fff;
+    }
   }
 }

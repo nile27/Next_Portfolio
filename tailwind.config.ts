@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -75,15 +76,47 @@ const config: Config = {
             opacity: "1",
           },
         },
+        appear: {
+          "0%": { opacity: "0" },
+          "50%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        mainAppear: {
+          "0%": { opacity: "0" },
+          "50%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        disappear: {
+          "0%": { visibility: "visible" },
+          "100%": { visibility: "hidden" },
+        },
       },
       animation: {
         blur: "blur 4s infinite",
         zoomOutDown: "zoomOutDown 3s",
         slideBckTop: "slideBckTop 3s",
         trackingInContract: "trackingInContract 2s",
+        appear: "appear 3.2s",
+        disappear: "disappear 3.4s",
+        mainAppear: "mainAppear 2s",
+      },
+      textShadow: {
+        sm: "0 8px 9px #c4b59d, 0px -2px 1px #fff",
+        light: "0 8px 9px #5E41B4, 0px -2px 1px #16161A",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };
 export default config;

@@ -1,11 +1,12 @@
 "use client";
-import React, { Children } from "react";
+import React, { useEffect } from "react";
 
 import { useRecoilValue } from "recoil";
 import { isDarkAtom } from "../state/isDarkAtom";
 
 const Container = ({ children }: any) => {
   const isDark = useRecoilValue(isDarkAtom);
+
   return (
     <div
       className={`px-10 pb-10 w-[100%] h-[100%] ${
