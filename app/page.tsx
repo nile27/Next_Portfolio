@@ -20,25 +20,12 @@ const DynamicComponent = dynamic(
     ssr: false,
   }
 );
-const DynamicIntro = dynamic(
-  () =>
-    import("./pages/Introduce").then(
-      (mod) =>
-        new Promise<typeof mod>((resolve) => {
-          setTimeout(() => resolve(mod), 4000);
-        })
-    ),
-  {
-    loading: () => <Intro />,
-    ssr: false,
-  }
-);
 
 function Home() {
   return (
     <DynamicComponent>
       <ThemeToggleButton />
-      {/* <DynamicIntro /> */}
+
       <Intro />
       <Project />
     </DynamicComponent>

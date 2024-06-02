@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import { useEffect } from "react";
+
 import { useRecoilState } from "recoil";
 import { isDarkAtom } from "@/app/state/isDarkAtom";
-import { useTheme } from "next-themes";
 
 import { cva } from "class-variance-authority";
 import { cn } from "../lib/utill";
@@ -65,7 +64,14 @@ const ThemeToggleButton = () => {
           `cursor-pointer flex justify-center items-center rounded-full w-[50px] h-[50px] text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 font-mono`
         )}
       >
-        <Image src={upArrow} alt="Top" />
+        <Image
+          src="/Img/upArrow.png"
+          alt="Top"
+          width={30}
+          height={30}
+          priority
+          style={{ width: 30, height: 30 }}
+        />
       </button>
     </div>
   );

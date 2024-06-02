@@ -2,6 +2,8 @@
 import { useRecoilState } from "recoil";
 import { isDarkAtom } from "../state/isDarkAtom";
 import { useEffect, useState } from "react";
+import Email from "@/public/Img/email.svg";
+import SvgButton from "@/components/SvgButton";
 
 function Intro() {
   const [isDark, setIsDark] = useRecoilState<boolean>(isDarkAtom);
@@ -43,9 +45,45 @@ function Intro() {
           isTime ? "flex" : "hidden"
         } justify-center items-center w-full h-full ${
           isDark ? "bg-DBg" : "bg-LBg"
-        } animate-mainAppear `}
+        } animate-mainAppear py-[15px] `}
       >
-        <h1>{"mingyu's portfolio"}</h1>
+        <aside className="flex justify-between items-start flex-col min-w-[240px] h-full p-[1rem] ">
+          <div className=" w-full flex justify-center items-start gap-[2rem] flex-col">
+            <div className=" w-full">
+              <h1
+                className={` text-H text-DText mb-3 ${
+                  isDark ? "text-DText" : "text-LText"
+                } `}
+              >
+                Contact
+              </h1>
+              <SvgButton style="email">ddj03104@gmail.com</SvgButton>
+            </div>
+            <div className=" w-full">
+              <h2
+                className={` text-H text-DText mb-3 ${
+                  isDark ? "text-DText" : "text-LText"
+                } `}
+              >
+                My Link
+              </h2>
+              <div className=" flex justify-center items-start flex-col w-full gap-[2rem]">
+                <SvgButton style="git" size="SH">
+                  Github
+                </SvgButton>
+                <SvgButton style="velog" size="SH">
+                  Blog
+                </SvgButton>
+              </div>
+            </div>
+          </div>
+          <span className=" text-sm text-DNav_disable  ">
+            최근 업데이트: 2024.05.27
+          </span>
+        </aside>
+        <div className=" w-full h-full  ">
+          <h1>{"mingyu's portfolio"}</h1>
+        </div>
       </section>
     </>
   );

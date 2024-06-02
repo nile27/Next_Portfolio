@@ -90,6 +90,7 @@ const config: Config = {
           "0%": { visibility: "visible" },
           "100%": { visibility: "hidden" },
         },
+        slide: {},
       },
       animation: {
         blur: "blur 4s infinite",
@@ -98,7 +99,7 @@ const config: Config = {
         trackingInContract: "trackingInContract 2s",
         appear: "appear 3.2s",
         disappear: "disappear 3.4s",
-        mainAppear: "mainAppear 2s",
+        mainAppear: "mainAppear 1s",
       },
       textShadow: {
         sm: "0 8px 9px #c4b59d, 0px -2px 1px #fff",
