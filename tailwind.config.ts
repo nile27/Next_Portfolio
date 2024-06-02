@@ -41,9 +41,46 @@ const config: Config = {
           "75%": { filter: "blur(2px)" },
           "100%": { filter: "blur(0)" },
         },
+        zoomOutDown: {
+          "40%": {
+            opacity: "1",
+            transform: "scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)",
+            "animation-timing-function":
+              "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+          },
+          to: {
+            opacity: "0",
+            transform: "scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0)",
+            "animation-timing-function": "cubic-bezier(0.175, 0.885, 0.32, 1)",
+          },
+        },
+        slideBckTop: {
+          "0%": {
+            transform: "translateZ(-200px) translateY(-200px)",
+          },
+          "100%": {
+            transform: "translateZ(0) translateY(0)",
+          },
+        },
+        trackingInContract: {
+          "0%": {
+            letterSpacing: "1em",
+            opacity: "0",
+          },
+          "40%": {
+            opacity: "0.6",
+          },
+          "100%": {
+            letterSpacing: "normal",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         blur: "blur 4s infinite",
+        zoomOutDown: "zoomOutDown 3s",
+        slideBckTop: "slideBckTop 3s",
+        trackingInContract: "trackingInContract 2s",
       },
     },
   },
