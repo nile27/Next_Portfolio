@@ -105,6 +105,10 @@ const config: Config = {
         sm: "0 8px 9px #c4b59d, 0px -2px 1px #fff",
         light: "0 8px 9px #5E41B4, 0px -2px 1px #16161A",
       },
+      screens: {
+        mobile: { max: "320px" },
+        tablet: { max: "700px" },
+      },
     },
   },
   plugins: [

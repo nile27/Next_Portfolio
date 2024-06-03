@@ -43,7 +43,7 @@ const ThemeToggleButton = () => {
     setIsDark(!isDark);
   };
   return (
-    <div className=" fixed bottom-9 right-9  flex justify-center items-center gap-2 flex-col z-10">
+    <div className=" fixed bottom-9 right-9 tablet:flex-row  flex justify-center items-center gap-2 flex-col z-10">
       <button
         onClick={handleTheme}
         className={cn(

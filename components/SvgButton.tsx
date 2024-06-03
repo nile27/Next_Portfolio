@@ -12,7 +12,7 @@ type TBtnStyle = {
 };
 
 const SvgButton = (props: TMainButton) => {
-  const { children, style, size } = props;
+  const { children, style, size, ...restBtnProps } = props;
   const isDark = useRecoilValue(isDarkAtom);
   const btnStyle: TBtnStyle = {
     email:
@@ -24,7 +24,8 @@ const SvgButton = (props: TMainButton) => {
 
   return (
     <button
-      className={`w-full h-auto min-w-[140px] flex justify-between items-center gap-3 ease-in-out duration-300 relative  isolation-auto z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-white before:-right-full before:hover:right-0 before:rounded-full before:bg-DMainPurple before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 px-4 py-3 text-sm font-semibold text-black ${
+      {...restBtnProps}
+      className={`w-full tablet:w-auto h-auto flex justify-between items-center gap-3 ease-in-out duration-300 relative  isolation-auto z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-white before:-right-full before:hover:right-0 before:rounded-full before:bg-DMainPurple before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 px-4 py-3 text-sm font-semibold text-black ${
         isDark ? "text-DBg" : "text-LBg"
       }  border-b-[1px] ${
         isDark ? "border-gray-200" : "border-gray-900"
@@ -43,8 +44,8 @@ const SvgButton = (props: TMainButton) => {
       </svg>
       <span
         className={`inline-block align-text-bottom h-[30px] ${
-          size === "SH" ? "text-[24px]" : "text-[16px]"
-        } h-full ${isDark ? "text-DText" : "text-LText"}`}
+          size === "SH" ? "text-[24px] tablet:text-[2.5vw]" : "text-[16px]"
+        } h-full ${isDark ? "text-DText" : "text-LText"} tablet:hidden`}
       >
         {children}
       </span>
