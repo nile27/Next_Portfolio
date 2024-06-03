@@ -83,6 +83,7 @@ const config: Config = {
         },
         mainAppear: {
           "0%": { opacity: "0" },
+
           "50%": { opacity: "0" },
           "100%": { opacity: "1" },
         },

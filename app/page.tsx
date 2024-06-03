@@ -6,13 +6,15 @@ import Loading from "./loading";
 
 import ThemeToggleButton from "../components/ThemeToggleButton";
 import Intro from "./pages/Intro";
+import Container from "./pages/Container";
+import Introduce from "./pages/Introduce";
 
 const DynamicComponent = dynamic(
   () =>
-    import("./pages/Container").then(
+    import("./pages/Intro").then(
       (mod) =>
         new Promise<typeof mod>((resolve) => {
-          setTimeout(() => resolve(mod), 2000);
+          setTimeout(() => resolve(mod), 3000);
         })
     ),
   {
@@ -23,12 +25,14 @@ const DynamicComponent = dynamic(
 
 function Home() {
   return (
-    <DynamicComponent>
+    <>
+      <DynamicComponent />
+      <Introduce />
       <ThemeToggleButton />
-
-      <Intro />
-      <Project />
-    </DynamicComponent>
+      <Container>
+        <Project />
+      </Container>
+    </>
   );
 }
 export default Home;

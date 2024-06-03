@@ -5,7 +5,6 @@ const Window: (Window & typeof globalThis) | undefined =
   typeof window !== "undefined" ? window : undefined;
 let theme = Window && Window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-console.log(theme);
 const sessionStorage = Window && Window.sessionStorage;
 //   typeof window !== "undefined" ? window.sessionStorage : undefined;
 
