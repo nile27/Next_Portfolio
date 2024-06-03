@@ -111,6 +111,14 @@ const config: Config = {
         tablet: { max: "700px" },
       },
     },
+    gridTemplateColumns: {
+      "auto-fill-100": "repeat(auto-fill, minmax(100px))",
+      "auto-fit-100": "repeat(auto-fit, minmax(100px))",
+    },
+    gridTemplateRows: {
+      "auto-fill-row-100": "repeat(auto-fill, minmax(100px))",
+      "auto-fit-row-100": "repeat(auto-fit, minmax(100px))",
+    },
   },
   plugins: [
     plugin(function ({ matchUtilities, theme }) {

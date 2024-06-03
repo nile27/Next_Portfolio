@@ -1,13 +1,11 @@
 import dynamic from "next/dynamic";
-
-import Project from "./pages/Project";
-
-import Loading from "./loading";
-
 import ThemeToggleButton from "../components/ThemeToggleButton";
-import Intro from "./pages/Intro";
+
 import Container from "./pages/Container";
 import Introduce from "./pages/Introduce";
+import Project from "./pages/Project";
+import Loading from "./loading";
+import Skill from "./pages/Skill";
 
 const DynamicComponent = dynamic(
   () =>
@@ -30,6 +28,7 @@ function Home() {
       <Introduce />
       <ThemeToggleButton />
       <Container>
+        <Skill />
         <Project />
       </Container>
     </>

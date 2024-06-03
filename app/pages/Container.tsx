@@ -14,11 +14,12 @@ const Container = ({ children }: any) => {
     <div
       className={`${isTime ? "flex" : "hidden"} ${
         isDark ? "bg-[#16161a]" : "bg-[#e7e7e9]"
-      } p-[20px] flex-row gap-[20px] relative h-[1000px]`}
+      } p-[20px] flex-row  w-[100vw] h-[100vh] relative`}
     >
-      <SideBar />
-
-      <div>{children}</div>
+      <aside>
+        <SideBar />
+      </aside>
+      <div className="w-full h-full">{children}</div>
     </div>
   );
 };
