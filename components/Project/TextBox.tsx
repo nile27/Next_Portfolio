@@ -4,6 +4,7 @@ import { isDarkAtom } from "@/app/state/isDarkAtom";
 import { useRecoilValue } from "recoil";
 import { projectData } from "@/lib/dummyData";
 import MainButton from "../MainButton";
+import ProjectSkillTag from "./ProjectSkillTag";
 
 const TextBox = (props: { idx: number }) => {
   const { idx } = props;
@@ -17,26 +18,29 @@ const TextBox = (props: { idx: number }) => {
       >
         {projectData[idx].header}
       </h1>
-      <span
-        className={` text-sm ${
-          isDark ? "text-DText" : "text-LText"
-        } font-bold `}
-      >
-        {projectData[idx].date}
-      </span>
+      <div className=" flex gap-2 justify-center w-auto h-auto">
+        <span
+          className={` text-sm ${
+            isDark ? "text-DText" : "text-LText"
+          } font-bold `}
+        >
+          {projectData[idx].date}
+        </span>
+        {"-"}
+        <span
+          className={` text-sm ${
+            isDark ? "text-DText" : "text-LText"
+          } font-bold `}
+        >
+          {projectData[idx].team}
+        </span>
+      </div>
       <div className=" flex flex-wrap justify-start items-center gap-2">
         {projectData[idx].skill.map((item, idx) => {
           return (
-            <div
-              className={`${
-                isDark
-                  ? "text-DText border-DMainPurple"
-                  : "text-LText border-LMainPurple"
-              } gap-2 flex flex-col justify-center items-center w-auto h-auto px-[15px] py-[5px] rounded-lg border-[1px] hover:scale-110 duration-150 hover:ring-1 `}
-              key={idx}
-            >
+            <ProjectSkillTag key={idx} isDark={isDark}>
               {item}
-            </div>
+            </ProjectSkillTag>
           );
         })}
       </div>

@@ -13,7 +13,7 @@ const NavBtn = (props: TMainButton) => {
   const isDark = useRecoilValue(isDarkAtom);
   return (
     <button
-      className={` cursor-pointer tablet900:min-w-[80px] min-w-[150px] h-[auto] w-full text-SH origin-[0%_50%] bg-transparent group after:block after:scale-0 after:scale-x-100 after:border-[2px] ${
+      className={` cursor-pointer tablet900:min-w-[80px] min-w-[240px] h-[auto] w-full text-SH origin-[0%_50%] bg-transparent group after:block after:scale-0 after:scale-x-100 after:border-[2px] ${
         isDark ? "after:border-b-white" : "after:border-LMainPurple"
       } after:transition-transform after:duration-[500ms] hover:after:scale-100`}
     >

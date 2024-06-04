@@ -26,7 +26,7 @@ const Project = () => {
             }`}
             key={item.header}
           >
-            <CarouselBox idx={idx} />
+            <CarouselBox idx={idx} width={400} height={305} />
             <TextBox idx={idx} />
           </article>
         );

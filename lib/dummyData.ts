@@ -23,12 +23,17 @@ type TProjectData = {
   skill: string[];
   imgSrc: string[];
   introText: string[];
+  team: string;
+  modalP?: string;
+  modalFirstli?: string[];
+  modalSecondli?: { troble: string; fix: string }[];
 };
 
 export const projectData: TProjectData[] = [
   {
     header: "My_Todo_Calender",
-    date: "2024.02 ~ 2024.03 (5주) - 개인",
+    date: "2024.02 ~ 2024.03 (5주)",
+    team: "개인",
     skill: [
       "React",
       "Figma",
@@ -50,10 +55,35 @@ export const projectData: TProjectData[] = [
       "일정을 시간 별, 월 별로 한눈에 볼 수가 있습니다.",
       "검색 기능을 통해 일정 이름과 태그를 검색할 수 있습니다.",
     ],
+    modalP:
+      "포트폴리오를 제작하기 위해 Notion 같은 플랫폼을 사용하다 저 만의 포트폴리오를 만들어 보기 위해서 제작을 하였습니다. css 라이브러리인 styled-component만 사용하다가 다른 css 툴을 사용해 보기 위해서 ScSS를 사용하여 제작하였습니다. 애니메이션 효과를 줄 수 있는 Keyframe을 사용하고, Fade-in/out, DropDown 등 다양한 애니메이션을 제작 하였고, react-responsive라는 라이브러리를 통해 Dom Selector들 보다 쉽게 box의 사이즈 조절을 하여 반응형 웹을 제작하였습니다.",
+    modalFirstli: [
+      "figma를 이용한 화면 설계",
+      "Date-fns와 Date-picker 라이브러리를 이용한 날짜 선택 기능",
+      "Redux-tookit을 이용한 전역상태관리 및  태그별 필터링 기능",
+      "반응형 웹",
+      "공공데이터포털의 공휴일 OPEN API를 이용하여 공휴일 처리",
+      "Date 객체를 이용하여 월 별 일정을 확인 할 수 있는 달력 개발",
+      "Mongoose 라이브러리를 통해 CRUD 구현",
+      "ExpressJS를 이용하여 일정, 검색 API 개발",
+    ],
+    modalSecondli: [
+      {
+        troble:
+          "Todo-list 페이지에서 새로 고침 시 메인 페이지로 바뀌는 현상 (컴포넌트 재사용 버그 - 오늘의 Todo-list page & day’s Todo-list page)",
+        fix: "useParams와 useEffect를 이용하여 특정 일의 Todo-list 페이지로 들어왔을 때에 엔드 포인트를 통해 해당되는 날짜의 Todo-list만 보일 수 있도록 수정",
+      },
+      {
+        troble:
+          "한 태그의 모든 일정이 삭제되었을 때, 태그가 아직 남는 버그 현상",
+        fix: "태그 자체에 일정 count 객체를 추가하여 count가 0이 되면 태그 삭제 ",
+      },
+    ],
   },
   {
     header: "Portfolio_(구 버전)",
-    date: "2023.08 ~ 2023.08 (2주) - 개인",
+    date: "2023.08 ~ 2023.08 (2주)",
+    team: "개인",
     skill: [
       "React",
       "Figma",
@@ -63,7 +93,6 @@ export const projectData: TProjectData[] = [
       "react-responsive",
     ],
     imgSrc: [
-      "https://user-images.githubusercontent.com/114140840/275229014-0fde6d2a-1ed9-4b52-ab7b-d2a66d14926c.gif",
       "https://user-images.githubusercontent.com/114140840/275229229-ffcd075f-c8bd-4525-8c16-bf36a4e6fa1d.gif",
       "https://user-images.githubusercontent.com/114140840/275229447-d65d0a1f-830c-468c-aa14-e8e5383065fb.gif",
       "https://user-images.githubusercontent.com/114140840/275229641-1fea8946-26bc-4322-9c9b-90d8e15d489c.gif",
@@ -77,7 +106,8 @@ export const projectData: TProjectData[] = [
   },
   {
     header: "Eaaaaaaats (맛집 탐색 사이트)",
-    date: "2023.05 ~ 2024.05 (4주) - 팀 (FE: 4명 BE: 3명)",
+    date: "2023.05 ~ 2024.05 (4주)",
+    team: "팀 (FE: 4명 BE: 3명)",
     skill: [
       "React",
       "styled-component",
@@ -89,7 +119,7 @@ export const projectData: TProjectData[] = [
     imgSrc: [
       "https://user-images.githubusercontent.com/118884127/240876205-8526ffcd-84a9-48aa-a49e-7f36252d5e2a.gif",
       "https://user-images.githubusercontent.com/118884127/240876213-8a1fc9cd-ac09-4efe-baf8-0c6035199baf.gif",
-      "https://user-images.githubusercontent.com/118884127/241088286-99f4ff31-8496-489e-bb63-96388298cc00.gif",
+
       "https://user-images.githubusercontent.com/118884127/240876220-2d012f0b-fb86-4f9d-8242-1c225cc88eb9.gif",
     ],
     introText: [

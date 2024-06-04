@@ -11,9 +11,14 @@ import { useState, useEffect } from "react";
 
 import Image from "next/image";
 import { projectData } from "@/lib/dummyData";
+import { relative } from "path";
 
-export function CarouselBox(props: { idx: number }) {
-  const { idx } = props;
+export function CarouselBox(props: {
+  idx: number;
+  width: number;
+  height: number;
+}) {
+  const { idx, width, height } = props;
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -31,15 +36,30 @@ export function CarouselBox(props: { idx: number }) {
   }, [api]);
 
   return (
-    <div className="w-[100%] max-w-[400px] h-full max-h-[250px] relative ">
-      <div className="bg-gradient-to-b from-transparent to-black/60 w-full h-full absolute z-[1]"></div>
-      <Carousel setApi={setApi} className="relative w-[100%] h-[auto]  ">
+    <div
+      className={`w-[100%] max-w-[${width}px]  max-h-[${height}px]  relative `}
+    >
+      <div className="bg-gradient-to-b from-transparent to-black/30 w-full h-[100%] absolute z-[1]"></div>
+      <Carousel
+        setApi={setApi}
+        className={`relative w-[100%] h-[${height}px] overflow-y-hidden `}
+      >
         <CarouselContent className="h-full">
           {projectData[idx].imgSrc.map((item, idx) => {
             return (
-              <CarouselItem key={idx} className="  relative">
-                <div className=" w-[100%] h-[250px] mobile:h-[200px]  relative">
-                  <Image src={item} alt="img" fill />
+              <CarouselItem key={idx} className="relative overflow-y-hidden">
+                <div
+                  className={` w-[${width}] h-[${height}px] textBoxHalf:w-[${
+                    width + 100
+                  }px] relative overflow-y-hidden`}
+                >
+                  <Image
+                    src={item}
+                    fill
+                    alt="img"
+                    priority
+                    className=" !relative !h-[unset] overflow-y-hidden"
+                  />
                 </div>
               </CarouselItem>
             );
