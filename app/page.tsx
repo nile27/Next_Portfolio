@@ -25,7 +25,9 @@ function Home() {
   return (
     <>
       <DynamicComponent />
+
       <Introduce />
+
       <ThemeToggleButton />
       <Container>
         <Skill />

@@ -14,12 +14,15 @@ const Container = ({ children }: any) => {
     <div
       className={`${isTime ? "flex" : "hidden"} ${
         isDark ? "bg-[#16161a]" : "bg-[#e7e7e9]"
-      } p-[20px] flex-row  w-[100vw] h-[auto] min-h-[100vh] relative`}
+      } p-[20px] flex-row  w-[100vw] h-[auto] min-h-[100vh] `}
     >
       <aside>
-        <SideBar />
+        <SideBar isDark={isDark} />
       </aside>
-      <div className="w-full h-full">{children}</div>
+
+      <div className="w-full h-full flex flex-col justify-start items-start gap-[3rem]">
+        {children}
+      </div>
     </div>
   );
 };
