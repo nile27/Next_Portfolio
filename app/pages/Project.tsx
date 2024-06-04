@@ -2,6 +2,10 @@
 import { useRecoilValue } from "recoil";
 import { isDarkAtom } from "../state/isDarkAtom";
 
+import { CarouselBox } from "@/components/Project/Carousel";
+import TextBox from "@/components/Project/TextBox";
+import { projectData } from "@/lib/dummyData";
+
 const Project = () => {
   const isDark = useRecoilValue(isDarkAtom);
   return (
@@ -13,11 +17,20 @@ const Project = () => {
       >
         Project
       </h1>
-      <article
-        className={`flex justify-start items-start p-[20px] bg-DSecondBg w-full h-auto rounded-lg gap-[20px] ${
-          isDark ? "bg-DSecondBg" : "bg-LSecondBg"
-        }`}
-      ></article>
+
+      {projectData.map((item, idx) => {
+        return (
+          <article
+            className={`flex justify-start items-center p-[30px] bg-DSecondBg w-full h-auto rounded-lg gap-[20px] textBoxHalf:flex-col ${
+              isDark ? "bg-DSecondBg" : "bg-LSecondBg"
+            }`}
+            key={item.header}
+          >
+            <CarouselBox idx={idx} />
+            <TextBox idx={idx} />
+          </article>
+        );
+      })}
     </section>
   );
 };

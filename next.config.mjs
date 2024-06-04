@@ -7,6 +7,12 @@ const nextConfig = {
     });
     return config;
   },
+
+  reactStrictMode: true,
+  images: {
+    unoptimized: true,
+    domains: ["github.com"],
+  },
 };
 
 export default nextConfig;

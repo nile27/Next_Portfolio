@@ -109,6 +109,7 @@ const config: Config = {
       screens: {
         mobile: { max: "320px" },
         tablet: { max: "700px" },
+        textBoxHalf: { max: "1170px" },
       },
     },
     gridTemplateColumns: {
