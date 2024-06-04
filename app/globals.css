@@ -24,11 +24,17 @@ div {
     span {
       --text-color: #000;
     }
+    h2 {
+      --text-color: #000;
+    }
   }
   .dark {
     --background: #16161a;
     --text-color: #fff;
     span {
+      --text-color: #fff;
+    }
+    h2 {
       --text-color: #fff;
     }
   }

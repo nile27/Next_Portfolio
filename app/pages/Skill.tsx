@@ -1,23 +1,24 @@
 "use client";
-import React from "react";
-import Image from "next/image";
+
+import SkillBox from "@/components/Skill/SkillBox";
+import { frontTagArr, BackTagArr, EtcTagArr } from "@/lib/dummyData";
+import { useRecoilValue } from "recoil";
+import { isDarkAtom } from "../state/isDarkAtom";
 
 const Skill = () => {
+  const isDark = useRecoilValue(isDarkAtom);
   return (
-    <section className="w-full h-full bg-white flex justify-start items-start flex-col gap-[4rem] p-[20px]">
-      <h1 className=" text-H text-DMainPurple font-bold">Skill</h1>
-      <article className="flex flex-col justify-start items-start p-[20px] bg-DSecondBg w-full h-auto rounded-lg">
-        <h2 className=" text-SH text-DText font-bold">Skill</h2>
-        <div className="w-full grid grid-cols-[repeat(auto-fill,minmax(50px,1fr))] gap-2">
-          <Image
-            src="/Img/Skill_front/typescript.svg"
-            alt="typescript"
-            width={40}
-            height={40}
-            priority
-          />
-        </div>
-      </article>
+    <section className="w-full h-auto bg-transparent flex justify-start items-start flex-col gap-[1rem] p-[20px]">
+      <h1
+        className={`text-H ${
+          isDark ? "text-DMainPurple" : "text-LMainPurple"
+        }  font-bold`}
+      >
+        Skill
+      </h1>
+      <SkillBox dataArr={frontTagArr} posi={"front"} h2={"Front-End"} />
+      <SkillBox dataArr={BackTagArr} posi={"Back"} h2={"Back-End"} />
+      <SkillBox dataArr={EtcTagArr} posi={"Etc"} h2={"ETC"} />
     </section>
   );
 };
