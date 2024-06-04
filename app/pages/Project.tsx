@@ -2,7 +2,7 @@
 import { useRecoilValue } from "recoil";
 import { isDarkAtom } from "../state/isDarkAtom";
 
-import { CarouselBox } from "@/components/Project/Carousel";
+import { CarouselBox } from "@/components/Project/CarouselBox";
 import TextBox from "@/components/Project/TextBox";
 import { projectData } from "@/lib/dummyData";
 

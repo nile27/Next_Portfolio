@@ -75,7 +75,7 @@ const Introduce = () => {
           최근 업데이트: 2024.05.27
         </span>
       </aside>
-      <main className=" w-full h-full flex justify-center items-center gap-[2rem] flex-col   ">
+      <main className=" w-full h-full flex justify-center items-center gap-[2rem] flex-col relative  ">
         <h1
           className={`${isDark ? "text-DText" : "text-LText"} text-H font-bold`}
         >
@@ -113,22 +113,22 @@ const Introduce = () => {
             새로운 것들에 대해 항상 도전하고 배우려고 노력합니다
           </span>
         </div>
-      </main>
-      <button
-        className={` bottom-[5%] left-[55%] absolute z-10  cursor-pointer bg-transparent px-3 py-2 rounded-md ${
-          isDark ? "text-white" : "text-LMainPurple"
-        } text-white animate-bounce`}
-      >
-        <svg
-          className="w-5 h-5"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          className={` bottom-[5%] tablet:left-[45%] left-[47%] absolute z-[200]  cursor-pointer bg-transparent px-3 py-2 rounded-md ${
+            isDark ? "text-white" : "text-LMainPurple"
+          } text-white animate-bounce`}
         >
-          <path d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
-        </svg>
-      </button>
+          <svg
+            className="w-5 h-5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
+          </svg>
+        </button>
+      </main>
     </section>
   );
 };

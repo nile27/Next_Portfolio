@@ -14,9 +14,9 @@ const Container = ({ children }: any) => {
     <div
       className={`${isTime ? "flex" : "hidden"} ${
         isDark ? "bg-[#16161a]" : "bg-[#e7e7e9]"
-      } p-[20px] flex-row  w-[100vw] h-[auto] min-h-[100vh] `}
+      } p-[20px]  flex-row tablet900:flex-col  w-[100vw] h-[auto] min-h-[100vh] relative`}
     >
-      <aside>
+      <aside className=" tablet900:sticky tablet900:top-0 tablet900:w-full">
         <SideBar isDark={isDark} />
       </aside>
 

@@ -6,6 +6,7 @@ import Introduce from "./pages/Introduce";
 import Project from "./pages/Project";
 import Loading from "./loading";
 import Skill from "./pages/Skill";
+import IsModal from "./pages/IsModal";
 
 const DynamicComponent = dynamic(
   () =>
@@ -29,6 +30,7 @@ function Home() {
       <Introduce />
 
       <ThemeToggleButton />
+      {/* <IsModal /> */}
       <Container>
         <Skill />
         <Project />

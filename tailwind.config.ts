@@ -107,8 +107,9 @@ const config: Config = {
         light: "0 8px 9px #5E41B4, 0px -2px 1px #16161A",
       },
       screens: {
-        mobile: { max: "320px" },
+        mobile: { max: "4200px" },
         tablet: { max: "700px" },
+        tablet900: { max: "900px" },
         textBoxHalf: { max: "1170px" },
       },
     },
