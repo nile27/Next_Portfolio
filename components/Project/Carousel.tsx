@@ -43,10 +43,9 @@ export function CarouselBox(props: { idx: number }) {
               <Image
                 src={item}
                 alt="img"
-                width={400}
-                height={400}
-                style={{ objectFit: "cover" }}
-                priority
+                width={300}
+                height={0}
+                className=" w-full h-[200px] object-fill overflow-hidden"
               />
             </CarouselItem>
           );
