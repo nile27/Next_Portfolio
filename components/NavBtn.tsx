@@ -1,21 +1,28 @@
-"use client";
 import { isDarkAtom } from "@/app/state/isDarkAtom";
-import React from "react";
+import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 
 type TMainButton = React.ComponentProps<"button"> & {
   length?: string;
   text: string;
+  isActive: boolean;
 };
-// ${isDark ? "":""}
+
 const NavBtn = (props: TMainButton) => {
   const { length, text, ...restOption } = props;
   const isDark = useRecoilValue(isDarkAtom);
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <button
+      {...restOption}
       className={` cursor-pointer tablet900:min-w-[80px] min-w-[240px] h-[auto] w-full text-SH origin-[0%_50%] bg-transparent group after:block after:scale-0 after:scale-x-100 after:border-[2px] ${
         isDark ? "after:border-b-white" : "after:border-LMainPurple"
-      } after:transition-transform after:duration-[500ms] hover:after:scale-100`}
+      } after:transition-transform after:duration-[500ms] hover:after:scale-100 ${
+        isActive ? "active:bg-white" : ""
+      }`}
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
     >
       <div className={`flex w-auto h-auto justify-between items-center p-1`}>
         <span
