@@ -1,14 +1,17 @@
 "use client";
 import React from "react";
 import { isDarkAtom } from "@/app/state/isDarkAtom";
-import { useRecoilValue } from "recoil";
+import IsModal from "@/app/pages/IsModal";
+import { useRecoilValue, useRecoilState } from "recoil";
 import { projectData } from "@/lib/dummyData";
 import MainButton from "../MainButton";
 import ProjectSkillTag from "./ProjectSkillTag";
+import { isModalAtom } from "@/app/state/isModalAtom";
 
 const TextBox = (props: { idx: number }) => {
   const { idx } = props;
   const isDark = useRecoilValue(isDarkAtom);
+  const [isModal, setIsModal] = useRecoilState(isModalAtom);
   return (
     <div className=" w-full flex justify-center items-start flex-col border-l-[1px] textBoxHalf:border-l-[0px] textBoxHalf:pt-4 textBoxHalf:border-t-[1px] border-black pl-8 h-[auto] gap-5">
       <h1
@@ -60,7 +63,9 @@ const TextBox = (props: { idx: number }) => {
           );
         })}
         <div className="w-full flex justify-end items-center pr-[5%] mt-7 mb-3">
-          <MainButton size={"md"}>자세히 보기</MainButton>
+          <MainButton size={"md"} onClick={() => setIsModal(!isModal)}>
+            자세히 보기
+          </MainButton>
         </div>
       </ul>
     </div>

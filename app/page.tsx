@@ -30,7 +30,7 @@ function Home() {
       <Introduce />
 
       <ThemeToggleButton />
-      {/* <IsModal /> */}
+      <IsModal />
       <Container>
         <Skill />
         <Project />
