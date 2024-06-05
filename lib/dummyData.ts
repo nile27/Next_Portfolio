@@ -27,6 +27,12 @@ type TProjectData = {
   modalP?: string;
   modalFirstli?: string[];
   modalSecondli?: { troble: string; fix: string }[];
+  Link: {
+    gitLink: string;
+    figmaLink?: string;
+    siteLink: string;
+  };
+  modalTag: string[];
 };
 
 export const projectData: TProjectData[] = [
@@ -79,6 +85,13 @@ export const projectData: TProjectData[] = [
         fix: "태그 자체에 일정 count 객체를 추가하여 count가 0이 되면 태그 삭제 ",
       },
     ],
+    Link: {
+      gitLink: "https://github.com/nile27/My-Calender",
+      figmaLink:
+        "https://www.figma.com/design/qZze2sAfNDqL95ranIaSfr/Untitled?node-id=0-1&t=z6gtCMg1NVzu32Ac-0",
+      siteLink: "https://next-portfolio-black-sigma.vercel.app/",
+    },
+    modalTag: ["솔로", "사이드 프로젝트"],
   },
   {
     header: "Portfolio_(구 버전)",
@@ -101,8 +114,25 @@ export const projectData: TProjectData[] = [
       "반응형 웹 사이트 입니다.",
       "Tap, Modal 등의 UI을 구현하였습니다.",
       "메뉴를 통해 해당 위치로 Scroll이 가능합니다.",
-      "이전 버전의 포트폴리오 사이트이고, 가독성과 좀 더 나은 UX를 제공하기 위해 리펙토링 하였습니다.",
     ],
+    modalP:
+      "이전 버전의 포트폴리오 사이트이고, 가독성과 좀 더 나은 UX를 제공하기 위해 지금 보시는 페이지로 리펙토링 하였습니다.",
+    modalFirstli: [
+      "figma를 이용한 화면 설계",
+      "나만의 포트폴리오를 만들어 보기 위해서 제작",
+      "새로운 css 툴을 사용해보기 위해 SCSS를 이용하여 제작",
+      "keyframe을 통해 애니메이션 효과 제작 (Fade-in/out, DropDown 등)",
+      "react-responsive 라이브러리를 통해 Dom Selector들 보다 쉽게 box의 사이즈 조절을 하여 반응형 웹 제작",
+      "글, 이미지 등을 따로 관리하여 유지보수를 쉽게 제작",
+    ],
+
+    Link: {
+      gitLink: "https://github.com/nile27/My-Calender",
+      figmaLink:
+        "https://www.figma.com/design/qZze2sAfNDqL95ranIaSfr/Untitled?node-id=0-1&t=z6gtCMg1NVzu32Ac-0",
+      siteLink: "https://next-portfolio-black-sigma.vercel.app/",
+    },
+    modalTag: ["솔로", "Portfolio_Old-version"],
   },
   {
     header: "Eaaaaaaats (맛집 탐색 사이트)",
@@ -128,5 +158,28 @@ export const projectData: TProjectData[] = [
       "리뷰, 평점을 통해 가게의 평가 및 평점을 매길 수 있습니다.",
       "사장님 계정을 통해 자신의 가게 등록 및 수정 등을 할 수가 있습니다.",
     ],
+    Link: {
+      gitLink: "https://github.com/nile27/Eaaaaaaats_refectoring",
+      figmaLink: undefined,
+      siteLink: "http://main22.s3-website.ap-northeast-2.amazonaws.com/",
+    },
+    modalP:
+      "Front-end & Back-end 협업 프로젝트이며, 한 달정도의 시간을 걸쳐 제작을 하였고, 첫 OpenApi를 사용하여 만든 프로젝트입니다.",
+    modalFirstli: [
+      "Front-end & Back-end 협업 프로젝트",
+      "figma를 이용한 화면 설계",
+      "카카오 지도 API와 가게 위치 자체 API를 이용하여 내 주변 가게 위치 지도 개발",
+      "JWT를 이용한 회원 관련 기능 담당 (로그인/ 회원가입/ 회원정보 CRUD/ 사장님 계정, 일반 회원 계정)",
+      "Recoil을 이용하여 전역상태관리",
+      "ReactJS 개발환경부터 S3 Bucket 환경까지 구성 및 개발 진행",
+    ],
+    modalSecondli: [
+      {
+        troble:
+          "AWS 과금이 예상보다 많아, 데이터 흐름을 재조정하는 리펙토링 진행 ",
+        fix: "어떤 정보를 불러올 때, 데이터를 여러번 불러오는 현상 때문에 과금이 많이 발생이 되어서, 데이터 호출 함수를 기존 보다 상단 위치의 컴포넌트에 작성하여 데이터 호출을 줄이고, 재사용한 데이터을 세션 스토리지에 저장하여 중복 호출을 줄인 경험이 있습니다.",
+      },
+    ],
+    modalTag: ["협업 프로젝트", "맛집 탐색 사이트"],
   },
 ];
