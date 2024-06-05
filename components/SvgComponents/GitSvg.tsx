@@ -23,7 +23,7 @@ const GitSvg = (props: TMainButton) => {
   return (
     <button
       {...restBtnProps}
-      className={` min-w-[100px]
+      className={` min-w-[100px] textBoxHalf:min-w-[40px]
       bg-DMainPurple hover:bg-white hover:text-DMainPurple hover:border-DMainPurple
       w-auto px-1 h-[40px] text-Sm cursor-pointer flex justify-center items-center rounded-lg text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 font-mono
        ${isDark ? "text-DText" : "text-LText"}  border-b-[1px] ${
@@ -42,7 +42,7 @@ const GitSvg = (props: TMainButton) => {
         <path d={btnStyle[style]} fill={`currentColor`} />
       </svg>
       <span
-        className={` text-center flex justify-center items-center h-full ${
+        className={` textBoxHalf:hidden tablet:hidden text-center flex justify-center items-center h-full ${
           isDark
             ? "text-DText hover:text-DMainPurple"
             : "text-LText hover:text-LMainPurple"
