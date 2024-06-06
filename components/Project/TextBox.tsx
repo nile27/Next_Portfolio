@@ -33,9 +33,9 @@ const TextBox = (props: { idx: number }) => {
             isDark ? "text-DText" : "text-LText"
           } font-bold `}
         >
-          {projectData[idx].date}
+          {projectData[idx].date + " - "}
         </span>
-        {"-"}
+
         <span
           className={` text-sm ${
             isDark ? "text-DText" : "text-LText"

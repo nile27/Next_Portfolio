@@ -1,12 +1,12 @@
 "use client";
 import { useRef, useEffect } from "react";
-import SkillBox from "@/components/Skill/SkillBox";
-import { frontTagArr, BackTagArr, EtcTagArr } from "@/lib/dummyData";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 import { isDarkAtom } from "../state/isDarkAtom";
 import { contentRefsState } from "../state/ContentRefs";
+import PriceCarousel from "../../components/Price/PriceCarousel";
+import { Pricearr } from "@/lib/dummyData";
 
-const Skill: React.FC = () => {
+const Price: React.FC = () => {
   const content1Ref = useRef<HTMLElement | null>(null);
   const isDark = useRecoilValue(isDarkAtom);
   const setContentRefs = useSetRecoilState(contentRefsState);
@@ -14,13 +14,13 @@ const Skill: React.FC = () => {
   useEffect(() => {
     setContentRefs((prevRefs) => {
       const newRefs = [...prevRefs];
-      newRefs[0] = content1Ref.current;
+      newRefs[3] = content1Ref.current;
       return newRefs;
     });
   }, []);
   return (
     <section
-      className={`w-full  h-auto bg-transparent flex justify-start items-start flex-col gap-[1rem] p-[20px]`}
+      className={`w-full overflow-x-hidden   h-auto bg-transparent flex justify-start items-start flex-col gap-[1rem] p-[20px] `}
       ref={content1Ref}
     >
       <h1
@@ -28,13 +28,14 @@ const Skill: React.FC = () => {
           isDark ? "text-DMainPurple" : "text-LMainPurple"
         }  font-bold`}
       >
-        Skill
+        Price
       </h1>
-      <SkillBox dataArr={frontTagArr} posi={"front"} h2={"Front-End"} />
-      <SkillBox dataArr={BackTagArr} posi={"Back"} h2={"Back-End"} />
-      <SkillBox dataArr={EtcTagArr} posi={"Etc"} h2={"ETC"} />
+
+      <main className="flex flex-col gap-2 w-full h-auto items-center justify-center relative p-[20px] ">
+        <PriceCarousel />
+      </main>
     </section>
   );
 };
 
-export default Skill;
+export default Price;

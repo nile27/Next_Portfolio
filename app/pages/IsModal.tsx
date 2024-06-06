@@ -182,27 +182,33 @@ const IsModal = () => {
               />
             </button>
 
-            <a
-              href={projectData[idx].Link.gitLink}
-              target="_blank"
-              className="w-auto h-auto tablet:w-auto"
-            >
-              <GitSvg style={"git"}>Github</GitSvg>
-            </a>
-            <a
-              href={projectData[idx].Link.figmaLink}
-              target="_blank"
-              className="w-auto h-auto tablet:w-auto"
-            >
-              <GitSvg style={"figma"}>Figma</GitSvg>
-            </a>
-            <a
-              href={projectData[idx].Link.siteLink}
-              target="_blank"
-              className="w-auto h-auto tablet:w-auto"
-            >
-              <GitSvg style={"link"}>배포 사이트</GitSvg>
-            </a>
+            {projectData[idx].Link.gitLink && (
+              <a
+                href={projectData[idx].Link.gitLink}
+                target="_blank"
+                className="w-auto h-auto tablet:w-auto"
+              >
+                <GitSvg style={"git"}>Github</GitSvg>
+              </a>
+            )}
+            {projectData[idx].Link.figmaLink && (
+              <a
+                href={projectData[idx].Link.figmaLink}
+                target="_blank"
+                className="w-auto h-auto tablet:w-auto"
+              >
+                <GitSvg style={"figma"}>Figma</GitSvg>
+              </a>
+            )}
+            {projectData[idx].Link.siteLink && (
+              <a
+                href={projectData[idx].Link.siteLink}
+                target="_blank"
+                className="w-auto h-auto tablet:w-auto"
+              >
+                <GitSvg style={"link"}>배포 사이트</GitSvg>
+              </a>
+            )}
           </aside>
         </>
       )}

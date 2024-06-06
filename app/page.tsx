@@ -8,6 +8,7 @@ import Loading from "./loading";
 import Skill from "./pages/Skill";
 import IsModal from "./pages/IsModal";
 import Experience from "./pages/Experience";
+import Price from "./pages/Price";
 
 const DynamicComponent = dynamic(
   () =>
@@ -36,6 +37,7 @@ function Home() {
         <Skill />
         <Project />
         <Experience />
+        <Price />
       </Container>
     </>
   );

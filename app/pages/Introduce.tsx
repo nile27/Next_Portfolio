@@ -71,7 +71,7 @@ const Introduce = () => {
             </div>
           </div>
         </div>
-        <span className=" text-sm text-DNav_disable tablet:hidden ">
+        <span className="w-full text-center text-sm text-DNav_disable tablet:hidden ">
           최근 업데이트: 2024.05.27
         </span>
       </aside>

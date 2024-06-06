@@ -84,8 +84,14 @@ export default function DropDownNav() {
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>
           <Button onClick={() => setIsOpen(!isOpen)}>
-            <Background isActive={isOpen} isDark={isDark}>
-              <MenuIcon isActive={isOpen} isDark={isDark}>
+            <Background
+              isactive={isOpen ? "true" : "false"}
+              isdark={isDark ? "true" : "false"}
+            >
+              <MenuIcon
+                isactive={isOpen ? "true" : "false"}
+                isdark={isDark ? "true" : "false"}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -93,7 +99,7 @@ export default function DropDownNav() {
             </Background>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56" ref={dropdownRef}>
+        <DropdownMenuContent className="w-auto" ref={dropdownRef}>
           <DropdownMenuSeparator />
 
           {navText.map((item, idx) => (
@@ -101,7 +107,6 @@ export default function DropDownNav() {
               <NavBtn
                 text={item.text}
                 length={item.length}
-                isActive={idx === 0}
                 onClick={(e) => {
                   scrollFunc(e, item.text);
                   setIsOpen(false);

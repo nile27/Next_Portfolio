@@ -1,3 +1,33 @@
+type TProjectData = {
+  header: string;
+  date: string;
+  skill: string[];
+  imgSrc: string[];
+  introText: string[];
+  team: string;
+  modalP?: string;
+  modalFirstli?: string[];
+  modalSecondli?: { troble: string; fix: string }[];
+  Link: {
+    gitLink: string;
+    figmaLink?: string;
+    siteLink: string;
+  };
+  modalTag: string[];
+};
+interface ITeam {
+  header: string;
+  semiHeader: string;
+  list: string[];
+}
+
+type TexperienceData = {
+  header: string;
+  date: string;
+  Learn: string[];
+  team: ITeam[];
+};
+
 export const frontTagArr: string[] = [
   "TypeScript",
   "JavaScript",
@@ -16,24 +46,6 @@ export const BackTagArr: string[] = ["Express", "Mongo", "Mongoose"];
 export const EtcTagArr: string[] = ["Figma", "Github"];
 
 export const imgSrc: string[] = [];
-
-type TProjectData = {
-  header: string;
-  date: string;
-  skill: string[];
-  imgSrc: string[];
-  introText: string[];
-  team: string;
-  modalP?: string;
-  modalFirstli?: string[];
-  modalSecondli?: { troble: string; fix: string }[];
-  Link: {
-    gitLink: string;
-    figmaLink?: string;
-    siteLink: string;
-  };
-  modalTag: string[];
-};
 
 export const projectData: TProjectData[] = [
   {
@@ -181,5 +193,135 @@ export const projectData: TProjectData[] = [
       },
     ],
     modalTag: ["협업 프로젝트", "맛집 탐색 사이트"],
+  },
+];
+
+export const experienceData: TexperienceData[] = [
+  {
+    header: "코드스테이츠 - FrontEnd 과정: (수료)",
+    date: "2015.03 ~ 2022.08",
+    Learn: [
+      "JavaScript 기반 프론트엔드 과정 ",
+      "HTML5 / CSS3를 이용한 웹 개발",
+      "React 프레임워크를 통한 웹 개발",
+      "약 200개 정도의 JavaScript 알고리즘 문제 풀이",
+    ],
+
+    team: [
+      {
+        header: "Main - Project: Eaaaaaaats (맛집 탐색 사이트)",
+        semiHeader: "코드스테이츠 Final Team Project",
+        list: [
+          "담당: 로그인/회원 가입, 공통 컴포넌트 제작, 맛집 탐색 지도 (Kakao Map)",
+          "Front & Back 협업 프로젝트",
+        ],
+      },
+      {
+        header: "Pre - Project: Stack OverFlow 클론 코딩",
+        semiHeader: "코드스테이츠 Pre Team Project",
+        list: [
+          "담당: 로그인/회원 가입, 공통 컴포넌트 제작, 게시판 제작",
+          "Front & Back 첫 협업 프로젝트",
+          "디자인, 화면 설계 등 개발 외 기술에 집중도를 줄이고, API 통신, 협업 의사소통 등 협업 프로젝트에 필요한 스킬 위주의 실습 프로젝트 ",
+        ],
+      },
+    ],
+  },
+
+  {
+    header: "Hannam Design Factory 트랙 - 수료 ",
+    date: "2019.03 ~ 2020.06",
+    Learn: [
+      "다양한 학과들과 협업하여 브레인스토밍을 통해 아이디어를 만들어 ProtoType을 제작하는 교내 프로젝트 ",
+      "참여 학과 : 디자인 전공, 경영학 전공, 기계공학 전공, 컴퓨터 전공 등",
+    ],
+
+    team: [
+      {
+        header: "물 절약 플랫폼 개발 프로젝트",
+        semiHeader:
+          "물의 사용량이 평균보다 얼마나 사용하는지를 불빛을 통해 인식을 주는 물 절약 제품",
+        list: [
+          "K-Water 산학 협력 캡스톤",
+          "Arduino & 앱 인벤터 개발 담당",
+          "교내 산학 협력 페스티벌 캡스톤 디자인 경진대회 장려상 - 2019.12",
+          "학생 창업유망팀 300 경진대회 300팀 최종 선정 - 2020.08",
+        ],
+      },
+      {
+        header: "Al - Jeo: 부유형 녹조 제거기 개발 프로젝트 ",
+        semiHeader: "수면 위를 떠다니며 녹조를 빨아드려 필터로 걸러내는 제품",
+        list: [
+          "K-Water 산학 협력 캡스톤",
+          "젬품 아이디어 개발 담당 (총 7명)",
+          "교내 산학 협력 페스티벌 캡스톤 디자인 경진대회 장려상 - 2019.12",
+          "학생 창업유망팀 300 경진대회 300팀 최종 선정 - 2020.08",
+        ],
+      },
+      {
+        header: "반려동물 구강 건강 장난감 개발 프로젝트",
+        semiHeader:
+          "반려견과 줄다리기 놀이를 통해 반려견의 구강에서 나는 구취를 통해 건강 상태를 확인하는 제품",
+        list: [
+          "Arduino 개발 담당",
+          "학생 창업유망팀 300 경진 대회 300팀 최종 선정 - 2019.08",
+          "WTA(대전 하이테크 페어 아디이어) 공모전 장려상 - 2019.10",
+        ],
+      },
+    ],
+  },
+];
+
+interface price {
+  img: string;
+  name: string;
+  date: string;
+  mainfrom: string;
+  from: string | null;
+}
+
+export const Pricearr: price[] = [
+  {
+    img: "/PriceImg/졸업 작품.jpeg",
+    name: "2022 컴퓨터공학과 학술제 장려상",
+    date: "2022.06",
+    mainfrom: "주최: 한남대학교",
+    from: "주관: 컴퓨터 공학과",
+  },
+  {
+    img: "/PriceImg/WM_창엄300.jpeg",
+    name: "학생 창업유망팀 300 경진대회 300팀 최종 선정",
+    date: "2020.08",
+    mainfrom: "주최: 교육부, 과학기술정보 통신부",
+    from: "주관: 한국연구재단, 한국청년기업가정신 재단",
+  },
+
+  {
+    img: "/PriceImg/WM_캡스톤 장려상.jpeg",
+    name: "2019 산학협력 페스티벌 캡스톤 디자인 경진대회 장려상",
+    date: "2019.12",
+    mainfrom: "주최,주관: 한남대학교, 한남대 창업지원단",
+    from: null,
+  },
+  {
+    img: "/PriceImg/HSV.jpg",
+    name: "2019 Hannam Star Venture 상상창업경진대회 최우수상",
+    date: "2019.12",
+    mainfrom: "주최,주관: 한남대학교, 한남대 창업지원단",
+    from: null,
+  },
+  {
+    img: "/PriceImg/WTA.jpeg",
+    name: "WTA 대전 하이테크 페어 아이디어 공모전 장려상",
+    date: "2019.10",
+    mainfrom: "주최,주관: 대전광역시, 세계과학도시연합",
+    from: null,
+  },
+  {
+    img: "/PriceImg/CAP_창업300.jpeg",
+    name: "학생 창업유망팀 300 경진대회 300팀 최종 선정",
+    date: "2019.08",
+    mainfrom: "주최: 교육부, 과학기술정보 통신부",
+    from: "주관: 한국연구재단, 한국청년기업가정신 재단",
   },
 ];

@@ -17,7 +17,7 @@ const Container = ({ children }: any) => {
     <div
       className={`${isTime ? "flex" : "hidden"} ${
         isDark ? "bg-[#16161a]" : "bg-[#e7e7e9]"
-      } p-[20px]  flex-row tablet900:flex-col  w-[100vw] h-[auto] min-h-[100vh] relative ${
+      } p-[20px]  flex-row tablet900:flex-col   w-[100vw] h-[auto] min-h-[100vh] relative ${
         isModal && "overflow-y-hidden "
       }`}
     >

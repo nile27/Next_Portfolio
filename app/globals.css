@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .scroll::-webkit-scrollbar {
+    background-color: transparent;
+    width: 80%;
+    height: 10px;
+    padding: 0 30px;
+  }
+  .scroll::-webkit-scrollbar-track {
+    background-color: transparent;
+    width: 30px;
+  }
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border-radius: 30px;
+
+    background-clip: padding-box;
+  }
+}
+
 body {
   box-sizing: border-box;
   padding: 0;

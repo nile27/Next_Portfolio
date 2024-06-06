@@ -5,7 +5,6 @@ import { useRecoilValue } from "recoil";
 type TMainButton = React.ComponentProps<"button"> & {
   length?: string;
   text: string;
-  isActive: boolean;
 };
 
 const NavBtn = (props: TMainButton) => {
@@ -16,11 +15,9 @@ const NavBtn = (props: TMainButton) => {
   return (
     <button
       {...restOption}
-      className={` cursor-pointer tablet900:min-w-[80px] min-w-[240px] w-full tablet:text-[5px]  h-[auto]  text-SH origin-[0%_50%] bg-transparent group after:block after:scale-0 after:scale-x-100 after:border-[2px] ${
+      className={` cursor-pointer tablet900:min-w-[50px] tablet900:max-w-[100px] min-w-[200px] w-full tablet:text-[5px]  h-[auto]  text-SH origin-[0%_50%] bg-transparent group after:block after:scale-0 after:scale-x-100 after:border-[2px] ${
         isDark ? "after:border-b-white" : "after:border-LMainPurple"
       } after:transition-transform after:duration-[500ms] hover:after:scale-100`}
-      onMouseEnter={() => setIsActive(true)}
-      onMouseLeave={() => setIsActive(false)}
     >
       <div
         className={`flex w-auto h-auto justify-between tablet900:justify-center items-center tablet900:p-0 p-1`}

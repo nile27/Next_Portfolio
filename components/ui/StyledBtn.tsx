@@ -10,7 +10,7 @@ const Button = styled.button`
 `;
 
 // Style for Background
-const Background = styled.div<{ isActive?: boolean; isDark?: boolean }>`
+const Background = styled.div<{ isactive?: string; isdark?: string }>`
   border-radius: 16px;
 
   background: #7f5af0;
@@ -23,14 +23,14 @@ const Background = styled.div<{ isActive?: boolean; isDark?: boolean }>`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  ${({ isActive }) =>
-    isActive &&
+  ${({ isactive }) =>
+    isactive === "true" &&
     css`
       background: #fffffe;
       box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
     `}
-  ${({ isDark }) =>
-    !isDark &&
+  ${({ isdark }) =>
+    isdark === "false" &&
     css`
       background: #5e41b4;
       border: none;
@@ -38,7 +38,7 @@ const Background = styled.div<{ isActive?: boolean; isDark?: boolean }>`
 `;
 
 // Style for Menu Icon
-const MenuIcon = styled.div<{ isActive?: boolean; isDark?: boolean }>`
+const MenuIcon = styled.div<{ isactive?: string; isdark?: string }>`
   width: 28px;
   height: 28px;
   padding: 3px;
@@ -61,15 +61,15 @@ const MenuIcon = styled.div<{ isActive?: boolean; isDark?: boolean }>`
   span:nth-child(2) {
     width: 60%;
   }
-  ${({ isDark }) =>
-    !isDark &&
+  ${({ isdark }) =>
+    isdark === "false" &&
     css`
       background: #5e41b4;
       border: none;
     `}
 
-  ${({ isActive }) =>
-    isActive &&
+  ${({ isactive }) =>
+    isactive === "true" &&
     css`
       span:nth-child(1) {
         background-color: rgb(255, 59, 48);

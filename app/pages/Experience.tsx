@@ -1,7 +1,5 @@
 "use client";
 import { useRef, useEffect } from "react";
-import SkillBox from "@/components/Skill/SkillBox";
-import { frontTagArr, BackTagArr, EtcTagArr } from "@/lib/dummyData";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 import { isDarkAtom } from "../state/isDarkAtom";
 import { contentRefsState } from "../state/ContentRefs";
@@ -32,9 +30,9 @@ const Experience: React.FC = () => {
         Education & Experience
       </h1>
       <main className="flex flex-col gap-2 w-full ">
-        <article className="flex flex-row justify-start gap-3 w-full tablet:flex-col ">
+        <article className="flex flex-row justify-start gap-3 w-full tablet900:flex-col ">
           <div
-            className={`min-w-[160px] border-r-[5px] tablet:border-r-0 tablet:border-b-[1px] border-${
+            className={`min-w-[160px] border-r-[5px] tablet900:border-r-0 tablet900:border-b-[1px]  border-${
               isDark ? "DMainPurple" : "LMainPurple"
             }`}
           >
