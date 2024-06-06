@@ -74,7 +74,7 @@ export const projectData: TProjectData[] = [
       "검색 기능을 통해 일정 이름과 태그를 검색할 수 있습니다.",
     ],
     modalP:
-      "포트폴리오를 제작하기 위해 Notion 같은 플랫폼을 사용하다 저 만의 포트폴리오를 만들어 보기 위해서 제작을 하였습니다. css 라이브러리인 styled-component만 사용하다가 다른 css 툴을 사용해 보기 위해서 ScSS를 사용하여 제작하였습니다. 애니메이션 효과를 줄 수 있는 Keyframe을 사용하고, Fade-in/out, DropDown 등 다양한 애니메이션을 제작 하였고, react-responsive라는 라이브러리를 통해 Dom Selector들 보다 쉽게 box의 사이즈 조절을 하여 반응형 웹을 제작하였습니다.",
+      "Back-End와 Front-End를 같이 제작한 프로젝트입니다. Front-End 실력을 키우긴 위해서는 백엔드에서도 어떤 씩으로 작업을 하는지에 대한 이해가 필요하다고 생각을 해서 Express를 이용하여 프로젝트를 진행을 하였습니다.",
     modalFirstli: [
       "figma를 이용한 화면 설계",
       "Date-fns와 Date-picker 라이브러리를 이용한 날짜 선택 기능",
@@ -100,10 +100,10 @@ export const projectData: TProjectData[] = [
     Link: {
       gitLink: "https://github.com/nile27/My-Calender",
       figmaLink:
-        "https://www.figma.com/design/qZze2sAfNDqL95ranIaSfr/Untitled?node-id=0-1&t=z6gtCMg1NVzu32Ac-0",
-      siteLink: "https://next-portfolio-black-sigma.vercel.app/",
+        "https://www.figma.com/design/xTzUSN4KQhBr6LU5IobyZ9/Calender?node-id=0-1&t=Q1zDg41vWQs5A3dD-0",
+      siteLink: "https://cheery-moonbeam-28829d.netlify.app/",
     },
-    modalTag: ["솔로", "사이드 프로젝트"],
+    modalTag: ["솔로", "Full-Stack 프로젝트", "사이드 프로젝트", "PostMan"],
   },
   {
     header: "Portfolio_(구 버전)",
@@ -139,10 +139,10 @@ export const projectData: TProjectData[] = [
     ],
 
     Link: {
-      gitLink: "https://github.com/nile27/My-Calender",
+      gitLink: "https://github.com/nile27/Portfolio_nile27",
       figmaLink:
-        "https://www.figma.com/design/qZze2sAfNDqL95ranIaSfr/Untitled?node-id=0-1&t=z6gtCMg1NVzu32Ac-0",
-      siteLink: "https://next-portfolio-black-sigma.vercel.app/",
+        "https://www.figma.com/file/g0fMpeE9IiQ8Ww1Vd37qBd/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4(UI)?type=design&node-id=0-1&mode=design&t=oLZkiFIQhixAqGtt-0",
+      siteLink: "https://nile27.github.io/",
     },
     modalTag: ["솔로", "Portfolio_Old-version"],
   },
