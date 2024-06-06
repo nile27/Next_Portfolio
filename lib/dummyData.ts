@@ -29,16 +29,16 @@ type TexperienceData = {
 };
 
 export const frontTagArr: string[] = [
-  "TypeScript",
-  "JavaScript",
+  "typescript",
+  "Javascript",
   "HTML",
   "CSS",
   "React",
   "NextJS",
   "Recoil",
-  "StyledComponents",
+  "Styledcomponents",
   "TailwindCSS",
-  "SCSS",
+  "Scss",
 ];
 
 export const BackTagArr: string[] = ["Express", "Mongo", "Mongoose"];
