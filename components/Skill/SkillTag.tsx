@@ -19,8 +19,8 @@ const SkillTag = (props: TSkillTag) => {
       <Image
         src={`/Img/Skill_${posi}/${text}.svg`}
         alt="typescript"
-        width={40}
-        height={40}
+        width={30}
+        height={30}
         priority
       />
       <span
