@@ -9,7 +9,7 @@ export default function PriceCarousel() {
     <div
       className={`h-auto w-full flex flex-row justify-between items-center relative border-[1px] rounded-lg ${
         isDark ? "border-DMainPurple" : "border-LMainPurple"
-      } max-w-[72vw] box-border p-[50px]`}
+      }  box-border p-[50px]`}
     >
       <div className="w-full h-auto flex justify-center items-start flex-col box-border">
         <div className="w-full h-auto  max-h-[500px] box-border ">

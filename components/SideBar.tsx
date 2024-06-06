@@ -41,7 +41,7 @@ const SideBar: React.FC<{ isDark: boolean }> = ({ isDark }) => {
 
   return (
     <section
-      className={` tablet:hidden tablet900:flex-row  tablet900:h-[80px] tablet900:w-[100vw] flex flex-col justify-start items-start min-w-[240px] w-[200px] h-full tablet900:top-0 relative ${
+      className={` tablet900:hidden tablet900:flex-row  tablet900:h-[80px] tablet900:w-[100vw] flex flex-col justify-start items-start min-w-[240px] w-[200px] h-full tablet900:top-0 relative ${
         isDark ? "tablet900:bg-DBg" : "tablet900:bg-LBg"
       }`}
     >

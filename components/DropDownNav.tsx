@@ -80,7 +80,7 @@ export default function DropDownNav() {
     };
   }, [isOpen]);
   return (
-    <section className="  tablet:flex hidden w-[50px]   flex-col tablet:left-[90%]  tablet:top-[10px] relative table900:flex h-auto ">
+    <section className="  tablet900:flex hidden w-[50px]   flex-col tablet900:left-[90%]  tablet900:top-[10px] relative table900:flex h-auto ">
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>
           <Button onClick={() => setIsOpen(!isOpen)}>
