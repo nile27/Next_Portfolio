@@ -16,21 +16,21 @@ const NavBtn = (props: TMainButton) => {
   return (
     <button
       {...restOption}
-      className={` cursor-pointer tablet900:min-w-[80px] min-w-[240px] h-[auto] w-full text-SH origin-[0%_50%] bg-transparent group after:block after:scale-0 after:scale-x-100 after:border-[2px] ${
+      className={` cursor-pointer tablet900:min-w-[80px] min-w-[240px] w-full tablet:text-[5px]  h-[auto]  text-SH origin-[0%_50%] bg-transparent group after:block after:scale-0 after:scale-x-100 after:border-[2px] ${
         isDark ? "after:border-b-white" : "after:border-LMainPurple"
-      } after:transition-transform after:duration-[500ms] hover:after:scale-100 ${
-        isActive ? "active:bg-white" : ""
-      }`}
+      } after:transition-transform after:duration-[500ms] hover:after:scale-100`}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >
-      <div className={`flex w-auto h-auto justify-between items-center p-1`}>
+      <div
+        className={`flex w-auto h-auto justify-between tablet900:justify-center items-center tablet900:p-0 p-1`}
+      >
         <span
           className={`${
             isDark
               ? "text-[#4a4c53] group-hover:text-white"
               : "text-LNav_disable group-hover:text-LText"
-          } group-after:block w-auto  group-after:transition-transform group-after:duration-[500ms] tablet900:text-[18px]  group-hover:after:scale-100`}
+          } group-after:block w-auto tablet900:text-center  group-after:transition-transform group-after:duration-[500ms] tablet900:text-[18px]  group-hover:after:scale-100`}
         >
           {text}
         </span>

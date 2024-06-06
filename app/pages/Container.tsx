@@ -6,6 +6,7 @@ import { useRecoilValue } from "recoil";
 import { isDarkAtom } from "../state/isDarkAtom";
 import { isTimeAtom } from "../state/isTimeAtom";
 import { isModalAtom } from "../state/isModalAtom";
+import DropDownNav from "@/components/DropDownNav";
 
 const Container = ({ children }: any) => {
   const isDark = useRecoilValue(isDarkAtom);
@@ -20,8 +21,9 @@ const Container = ({ children }: any) => {
         isModal && "overflow-y-hidden "
       }`}
     >
-      <aside className=" tablet900:sticky tablet900:top-0 tablet900:w-full">
+      <aside className=" tablet900:sticky tablet900:top-0 tablet900:w-full tablet900:z-50">
         <SideBar isDark={isDark} />
+        <DropDownNav />
       </aside>
 
       <div
