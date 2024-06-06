@@ -1,6 +1,7 @@
 import React from "react";
 import { isDarkAtom } from "@/app/state/isDarkAtom";
 import { useRecoilValue } from "recoil";
+import MainButton from "../MainButton";
 
 const ExperienceFrame = () => {
   const isDark = useRecoilValue(isDarkAtom);
@@ -17,6 +18,15 @@ const ExperienceFrame = () => {
       "Main - Project : 맛집 탐색 사이트",
       "Pre - Project : 스택 오버플로우 클론",
     ],
+
+    team: {
+      header: "Main - Project: Eaaaaaaats (맛집 탐색 사이트)",
+      semiHeader: "코드스테이츠 Final Team Project",
+      list: [
+        "담당: 로그인/회원 가입, 공통 컴포넌트 제작, 맛집 탐색 지도 (Kakao Map)",
+        "Front & Back 협업 프로젝트",
+      ],
+    },
   };
   return (
     <article className="flex flex-row justify-start gap-3 w-full tablet:flex-col  ">
@@ -58,14 +68,21 @@ const ExperienceFrame = () => {
         <div className=" flex flex-col w-full h-auto mt-[10px] ">
           <h3
             className={` text-SH font-bold ${
-              isDark ? "text-DThirdColor" : "text-LThirdColor"
+              isDark ? "text-DThirdColor  " : "text-LThirdColor"
             }`}
           >
             Learn & Explanation
           </h3>
           <ul className="flex flex-col gap-2 list-disc pl-[15px] pt-2">
             {dummy.Learn.map((item, idx) => {
-              return <li key={idx}>{item}</li>;
+              return (
+                <li
+                  key={idx}
+                  className={`${isDark ? "text-DText" : "text-LText"}`}
+                >
+                  {item}
+                </li>
+              );
             })}
           </ul>
         </div>
@@ -79,6 +96,45 @@ const ExperienceFrame = () => {
           </h3>
           <ul className="flex flex-col gap-2 list-disc pl-[15px] pt-2">
             {dummy.active.map((item, idx) => {
+              return (
+                <li
+                  key={idx}
+                  className={`${isDark ? "text-DText" : "text-LText"}`}
+                >
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className=" flex flex-col w-full h-auto mt-[10px]">
+          <div className=" flex flex-row tablet:flex-col justify-start items-center gap-8">
+            <span
+              className={` bg-transparent font-bold ${
+                isDark
+                  ? "text-[#2AB4E3] border-l-[5px] border-[#2AB4E3] pl-5"
+                  : "text-[#0E6E96] border-l-[5px] border-[#0E6E96] pl-5"
+              }`}
+            >
+              Team - 1
+            </span>
+            <h3
+              className={` text-SH bg-transparent font-bold ${
+                isDark ? "text-DText" : "text-LText"
+              }`}
+            >
+              {dummy.team.header}
+            </h3>
+          </div>
+          <span
+            className={`p-2 w-full ${
+              isDark ? "text-DText border-b-DText" : "text-LText border-b-LText"
+            } border-b-2 border-b-[]`}
+          >
+            {dummy.team.semiHeader}
+          </span>
+          <ul className=" mt-2 flex flex-col gap-2 p-3 list-disc">
+            {dummy.team.list.map((item, idx) => {
               return <li key={idx}>{item}</li>;
             })}
           </ul>

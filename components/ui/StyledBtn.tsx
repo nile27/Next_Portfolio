@@ -10,9 +10,9 @@ const Button = styled.button`
 `;
 
 // Style for Background
-const Background = styled.div<{ isActive?: boolean }>`
+const Background = styled.div<{ isActive?: boolean; isDark?: boolean }>`
   border-radius: 16px;
-  border: 1px solid #1a1a1a;
+
   background: #7f5af0;
   mix-blend-mode: luminosity;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
@@ -29,10 +29,16 @@ const Background = styled.div<{ isActive?: boolean }>`
       background: #fffffe;
       box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
     `}
+  ${({ isDark }) =>
+    !isDark &&
+    css`
+      background: #5e41b4;
+      border: none;
+    `}
 `;
 
 // Style for Menu Icon
-const MenuIcon = styled.div<{ isActive?: boolean }>`
+const MenuIcon = styled.div<{ isActive?: boolean; isDark?: boolean }>`
   width: 28px;
   height: 28px;
   padding: 3px;
@@ -55,6 +61,12 @@ const MenuIcon = styled.div<{ isActive?: boolean }>`
   span:nth-child(2) {
     width: 60%;
   }
+  ${({ isDark }) =>
+    !isDark &&
+    css`
+      background: #5e41b4;
+      border: none;
+    `}
 
   ${({ isActive }) =>
     isActive &&
