@@ -53,9 +53,8 @@ const Experience: React.FC = () => {
               2015.03 ~ 2022.08
             </span>
             <div className=" bg-transparent flex gap-1">
-              {" "}
               <span
-                className={`text-SH font-bold ${
+                className={`text-[20px] font-bold tablet900:text-[20px] ${
                   isDark ? "text-DText" : "text-LText"
                 }`}
               >

@@ -30,6 +30,20 @@ const Container = ({ children }: any) => {
         className={`w-full h-full flex flex-col justify-start items-start gap-[3rem] relative `}
       >
         {children}
+        <div
+          className={`w-full h-[10vh] flex justify-center pb-[50px] ${
+            isDark ? "text-DText" : "text-LText"
+          }`}
+        >
+          <span
+            className={` text-[16px] tablet:text-[12px]  w-full h-full flex justify-center text-center ${
+              isDark ? "text-DText text-shadow-light " : "text-LText"
+            }  bg-[linear-gradient(to bottom, #ece4d9 0%,#e9dfd1 100%]`}
+          >
+            지금 보신 사이트는 NextJS-14, Tailwind CSS, Styled-Components로
+            제작이 되었습니다.
+          </span>
+        </div>
       </div>
     </div>
   );

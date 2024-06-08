@@ -91,7 +91,7 @@ const ExperienceFrame = () => {
                             Team {idx + 1}
                           </span>
                           <h3
-                            className={` text-SH bg-transparent font-bold ${
+                            className={` text-[20px] bg-transparent font-bold ${
                               isDark ? "text-DText" : "text-LText"
                             }`}
                           >
