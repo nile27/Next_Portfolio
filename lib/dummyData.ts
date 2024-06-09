@@ -26,6 +26,7 @@ type TexperienceData = {
   date: string;
   Learn: string[];
   team: ITeam[];
+  header2: string;
 };
 
 export const frontTagArr: string[] = [
@@ -198,7 +199,8 @@ export const projectData: TProjectData[] = [
 
 export const experienceData: TexperienceData[] = [
   {
-    header: "코드스테이츠 - FrontEnd 과정: (수료)",
+    header: "코드스테이츠",
+    header2: "FrontEnd 과정: (수료)",
     date: "2015.03 ~ 2022.08",
     Learn: [
       "JavaScript 기반 프론트엔드 과정 ",
@@ -229,7 +231,8 @@ export const experienceData: TexperienceData[] = [
   },
 
   {
-    header: "Hannam Design Factory 트랙 - 수료 ",
+    header: "Hannam Design Factory 트랙",
+    header2: "수료",
     date: "2019.03 ~ 2020.06",
     Learn: [
       "다양한 학과들과 협업하여 브레인스토밍을 통해 아이디어를 만들어 ProtoType을 제작하는 교내 프로젝트 ",
@@ -249,7 +252,7 @@ export const experienceData: TexperienceData[] = [
         ],
       },
       {
-        header: "Al - Jeo: 부유형 녹조 제거기 개발 프로젝트 ",
+        header: "부유형 녹조 제거기 개발 프로젝트 ",
         semiHeader: "수면 위를 떠다니며 녹조를 빨아드려 필터로 걸러내는 제품",
         list: [
           "K-Water 산학 협력 캡스톤",

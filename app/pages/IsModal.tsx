@@ -74,7 +74,11 @@ const IsModal = () => {
                 >
                   <CarouselBox idx={idx} width={700} height={350} />
                 </div>
-                <div className="flex justify-center items-center w-[80%] p-6 border-b-[1px] mb-5 ">
+                <div
+                  className={`flex justify-center items-center w-[80%] p-6 border-b-[1px] mb-5 ${
+                    isDark ? "border-DSecondBg" : "border-LSecondBg"
+                  }  `}
+                >
                   <p className={` ${isDark ? "text-DText" : "text-LText"}`}>
                     {projectData[idx].modalP}
                   </p>
@@ -106,14 +110,14 @@ const IsModal = () => {
                     작업 기여도
                   </span>
                   <ul
-                    className={`h-auto w-full flex flex-col gap-2 tablet:pl-0 tablet:pt-2 tablet:text-[12px] pt-6 ${
+                    className={`h-auto w-full flex flex-col gap-2 tablet:pl-0 tablet:pt-2  pt-6 ${
                       isDark ? "border-white" : "border-black"
                     } list-disc `}
                   >
                     {projectData[idx].modalFirstli?.map((item, idx) => {
                       return (
                         <li
-                          className={` ml-[10px] ${
+                          className={` ml-[10px] mobile:text-[14px] ${
                             isDark ? "text-DText" : "text-LText"
                           } `}
                           key={idx}
@@ -135,7 +139,7 @@ const IsModal = () => {
                       Trouble Shooting
                     </span>
                     <ul
-                      className={`h-auto w-full flex flex-col gap-2 tablet:pl-[0px] pt-2  ${
+                      className={` h-auto w-full flex flex-col gap-2 tablet:pl-[0px] pt-2  ${
                         isDark ? "border-white" : "border-black"
                       } `}
                     >
@@ -143,7 +147,7 @@ const IsModal = () => {
                         return (
                           <div key={idx}>
                             <li
-                              className={` ${
+                              className={`mobile:text-[14px] ${
                                 isDark
                                   ? "text-DText bg-DSecondBg"
                                   : "text-LText bg-LSecondBg"
@@ -152,7 +156,7 @@ const IsModal = () => {
                               {item.troble}
                             </li>
                             <li
-                              className={` ${
+                              className={`mobile:text-[14px] ${
                                 isDark ? "text-DText" : "text-LText"
                               } p-2`}
                             >

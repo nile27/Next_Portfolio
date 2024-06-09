@@ -26,7 +26,7 @@ const SkillTag = (props: TSkillTag) => {
       <span
         className={` w-full ${
           isDark ? "text-DText" : "text-LText"
-        } text-center whitespace-break-space `}
+        } text-center whitespace-break-space mobile:text-[14px] `}
       >
         {text !== "Styled" ? text : `${text} Components`}
       </span>

@@ -34,7 +34,7 @@ const ExperienceFrame = () => {
                 {item.date}
               </span>
               <div
-                className={`bg-transparent flex gap-1 border-b-[1px] w-full pb-2 ${
+                className={`bg-transparent mobile:flex-col flex gap-1 border-b-[1px] w-full pb-2 ${
                   isDark ? "text-DText border-DText" : "text-LText border-LText"
                 } `}
               >
@@ -44,6 +44,20 @@ const ExperienceFrame = () => {
                   } `}
                 >
                   {item.header}
+                </span>
+                <span
+                  className={`text-SH font-bold mobile:hidden ${
+                    isDark ? "text-DText " : "text-LText"
+                  } `}
+                >
+                  {" - "}
+                </span>
+                <span
+                  className={`text-SH font-bold ${
+                    isDark ? "text-DText " : "text-LText"
+                  } `}
+                >
+                  {item.header2}
                 </span>
               </div>
               <div className=" flex flex-col w-full h-auto mt-[10px] ">
