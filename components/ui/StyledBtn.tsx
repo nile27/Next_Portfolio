@@ -7,6 +7,7 @@ const Button = styled.button`
   margin: 0;
   cursor: pointer;
   font-family: inherit;
+  outline-style: none;
 `;
 
 // Style for Background

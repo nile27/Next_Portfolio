@@ -21,7 +21,6 @@ export default function DropDownNav() {
     { text: "Project", length: `${projectData.length}` },
     { text: "Experience" },
     { text: "Price", length: "3" },
-    { text: "Contact" },
   ];
   const contentRefs = useRecoilValue<(HTMLElement | null)[]>(contentRefsState);
   const isDark = useRecoilValue(isDarkAtom);
@@ -38,7 +37,7 @@ export default function DropDownNav() {
       Skill: 0,
       Project: 1,
       Experience: 2,
-      Contact: 3,
+      Price: 3,
     };
 
     const targetIndex = menu[name];
@@ -80,7 +79,7 @@ export default function DropDownNav() {
     };
   }, [isOpen]);
   return (
-    <section className="  tablet900:flex hidden w-[50px]   flex-col tablet900:left-[90%]  tablet900:top-[10px] relative table900:flex h-auto ">
+    <section className="  tablet900:flex hidden w-[50px]   flex-col tablet900:left-[90%]  tablet900:top-[10px] relative table900:flex h-auto  ">
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>
           <Button onClick={() => setIsOpen(!isOpen)}>
@@ -99,11 +98,14 @@ export default function DropDownNav() {
             </Background>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-auto" ref={dropdownRef}>
+        <DropdownMenuContent
+          className={`"w-auto ${isDark ? "bg-DSecondBg" : "bg-LSecondBg"}`}
+          ref={dropdownRef}
+        >
           <DropdownMenuSeparator />
 
           {navText.map((item, idx) => (
-            <DropdownMenuItem key={idx}>
+            <DropdownMenuItem key={idx} className="bg-transparent">
               <NavBtn
                 text={item.text}
                 length={item.length}

@@ -19,12 +19,12 @@ function Intro() {
 
   return (
     <div
-      className={` w-[100vw] h-[100vh] fixed overflow-hidden ${
+      className={` w-[100vw] h-[100vh] relative overflow-hidden ${
         !isTime ? "flex " : "hidden"
-      }`}
+      } z-50`}
     >
       <section
-        className={`flex justify-center items-center w-full h-full ${
+        className={`flex justify-center items-center fixed z-50 w-full h-full ${
           isDark ? "bg-DBg" : "bg-LBg"
         } animate-disappear `}
       >

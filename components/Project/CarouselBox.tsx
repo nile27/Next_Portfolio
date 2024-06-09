@@ -26,7 +26,7 @@ export function CarouselBox(props: {
     if (!api) {
       return;
     }
-    console.log(api.scrollSnapList().length);
+
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
 

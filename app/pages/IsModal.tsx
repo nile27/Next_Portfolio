@@ -51,7 +51,7 @@ const IsModal = () => {
                 >
                   {projectData[idx].header}
                 </span>
-                <div className="flex flex-row justify-center gap-2 p-[10px]">
+                <div className="flex flex-row flex-wrap justify-center gap-2 p-[10px]">
                   {projectData[idx].modalTag.map((item, idx) => {
                     return (
                       <div
