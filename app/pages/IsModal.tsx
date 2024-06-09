@@ -68,7 +68,7 @@ const IsModal = () => {
                   })}
                 </div>
                 <div
-                  className={`flex rounded-xl px-[40px] justify-center w-full  max-w-[700px] h-auto border-[5px] border-b-[8px] ${
+                  className={`flex rounded-xl px-[40px] tablet:px-[10px] justify-center w-full  max-w-[700px] h-auto border-[5px] border-b-[8px] ${
                     isDark ? " border-DText" : " border-LSecondBg"
                   }`}
                 >
