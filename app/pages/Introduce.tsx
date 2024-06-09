@@ -72,7 +72,7 @@ const Introduce = () => {
           </div>
         </div>
         <span className="w-full text-center text-sm text-DNav_disable tablet:hidden ">
-          최근 업데이트: 2024.06.06
+          최근 업데이트: 2024.06.09
         </span>
       </aside>
       <main className=" w-full h-full flex justify-center items-center gap-[2rem] flex-col relative  ">

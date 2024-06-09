@@ -64,6 +64,14 @@ export default function DropDownNav() {
       setIsOpen(false);
     }
   };
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText("ddj03104@gmail.com");
+      alert("클립보드에 복사되었습니다.");
+    } catch (error) {
+      console.error(error);
+    }
+  };
   useEffect(() => {
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
@@ -116,6 +124,15 @@ export default function DropDownNav() {
               />
             </DropdownMenuItem>
           ))}
+          <DropdownMenuItem className="bg-transparent">
+            <NavBtn
+              text={"contact"}
+              onClick={() => {
+                copyToClipboard();
+                setIsOpen(false);
+              }}
+            />
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </section>
