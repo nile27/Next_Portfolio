@@ -14,21 +14,21 @@ const SkillTag = (props: TSkillTag) => {
     <div
       className={` ${
         isDark ? "bg-DBg" : "bg-LBg"
-      } gap-2 flex flex-col justify-center items-center min-w-[90px] w-auto h-full p-[10px] rounded-lg hover:border-[1px] hover:scale-105 duration-150 hover:ring-1 `}
+      } gap-2 flex flex-col justify-center items-center w-auto h-full p-[10px] rounded-lg hover:border-[1px] hover:scale-105 duration-150 hover:ring-1 `}
     >
       <Image
         src={`/Img/Skill_${posi}/${text}.svg`}
         alt="typescript"
-        width={30}
-        height={30}
+        width={25}
+        height={25}
         priority
       />
       <span
         className={` w-full ${
           isDark ? "text-DText" : "text-LText"
-        } text-center whitespace-pre-wrap `}
+        } text-center whitespace-break-space `}
       >
-        {text}
+        {text !== "Styled" ? text : `${text} Components`}
       </span>
     </div>
   );

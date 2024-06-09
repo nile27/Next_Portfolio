@@ -19,7 +19,7 @@ const TextBox = (props: { idx: number }) => {
     setModalIdx(idx);
   };
   return (
-    <div className=" w-full flex justify-center items-start flex-col border-l-[1px] textBoxHalf:border-l-[0px] textBoxHalf:pt-4 textBoxHalf:border-t-[1px] border-black pl-8 h-[auto] gap-5">
+    <div className="  w-full flex justify-center items-start flex-col border-l-[1px] textBoxHalf:border-l-[0px] textBoxHalf:pt-4 textBoxHalf:border-t-[1px] border-black pl-8 tablet:pl-0 h-[auto] gap-5">
       <h1
         className={` text-SH ${
           isDark ? "text-DText" : "text-LText"
@@ -27,13 +27,20 @@ const TextBox = (props: { idx: number }) => {
       >
         {projectData[idx].header}
       </h1>
-      <div className=" flex gap-2 justify-center w-auto h-auto">
+      <div className=" flex gap-2 justify-center w-auto h-auto tablet:flex-col">
         <span
           className={` text-sm ${
             isDark ? "text-DText" : "text-LText"
           } font-bold `}
         >
-          {projectData[idx].date + " - "}
+          {projectData[idx].date}
+        </span>
+        <span
+          className={` text-sm ${
+            isDark ? "text-DText" : "text-LText"
+          } font-bold tablet:hidden `}
+        >
+          {" - "}
         </span>
 
         <span

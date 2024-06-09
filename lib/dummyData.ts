@@ -36,7 +36,7 @@ export const frontTagArr: string[] = [
   "React",
   "NextJS",
   "Recoil",
-  "Styledcomponents",
+  "Styled",
   "TailwindCSS",
   "Scss",
 ];
@@ -147,7 +147,7 @@ export const projectData: TProjectData[] = [
     modalTag: ["솔로", "Portfolio_Old-version"],
   },
   {
-    header: "Eaaaaaaats (맛집 탐색 사이트)",
+    header: "잇츠_(맛집 탐색 사이트)",
     date: "2023.05 ~ 2024.05 (4주)",
     team: "팀 (FE: 4명 BE: 3명)",
     skill: [
@@ -209,7 +209,7 @@ export const experienceData: TexperienceData[] = [
 
     team: [
       {
-        header: "Main - Project: Eaaaaaaats (맛집 탐색 사이트)",
+        header: "잇츠 _ (맛집 탐색 사이트)",
         semiHeader: "코드스테이츠 Final Team Project",
         list: [
           "담당: 로그인/회원 가입, 공통 컴포넌트 제작, 맛집 탐색 지도 (Kakao Map)",
@@ -217,7 +217,7 @@ export const experienceData: TexperienceData[] = [
         ],
       },
       {
-        header: "Pre - Project: Stack OverFlow 클론 코딩",
+        header: "Stack OverFlow Clone 코딩",
         semiHeader: "코드스테이츠 Pre Team Project",
         list: [
           "담당: 로그인/회원 가입, 공통 컴포넌트 제작, 게시판 제작",

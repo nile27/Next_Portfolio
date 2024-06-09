@@ -32,11 +32,11 @@ const IsModal = () => {
           <section className="fixed z-30 backdrop-blur-md bg-[rgba(255,255,192,0.1)] w-full h-[100vh]  inset-0 overflow-y-auto">
             <div className="flex  w-full flex-row justify-center items-start h-auto relative ">
               <article
-                className={` ${
+                className={`  pb-[100px] ${
                   isDark
                     ? "bg-DBg border-DMainPurple"
                     : "bg-LBg border-DMainPurple"
-                } border-[1px] w-[100vw] rounded-lg z-30 t-[30%] flex flex-col justify-start items-center h-auto overflow-y-auto mt-10 mx-16 p-[60px] gap-2 relative shadow-[0 4px 8px rgba(0, 0, 0, 0.2)] `}
+                } border-[1px] w-[100vw]  rounded-lg z-30 t-[30%] flex flex-col justify-start items-center h-auto overflow-y-auto mt-10 tablet:mx-0 mx-16 pt-[60px] px-[5%]  gap-2 relative shadow-[0 4px 8px rgba(0, 0, 0, 0.2)] `}
               >
                 <div className="flex flex-col justify-center items-center gap-[10px]"></div>
                 <span
@@ -60,7 +60,7 @@ const IsModal = () => {
                           isDark
                             ? "text-DText border-DMainPurple"
                             : "text-LText border-LMainPurple"
-                        } gap-2 flex flex-col justify-center items-center w-auto h-auto px-[15px] py-[5px] rounded-lg border-[1px] hover:scale-110 duration-150 hover:ring-1 `}
+                        } gap-2 flex flex-col justify-center tablet:text-[12px] whitespace-nowrap items-center w-auto h-auto px-[15px] py-[5px] rounded-lg border-[1px] hover:scale-110 duration-150 hover:ring-1 `}
                       >
                         {item}
                       </div>
@@ -87,7 +87,7 @@ const IsModal = () => {
                   >
                     사용 기술
                   </span>
-                  <div className="flex gap-3 justify-start flex-wrap">
+                  <div className="flex gap-3 justify-start flex-wrap ">
                     {projectData[idx].skill.map((item, idx) => {
                       return (
                         <ProjectSkillTag key={idx} isDark={isDark}>
@@ -101,21 +101,21 @@ const IsModal = () => {
                   <span
                     className={`${
                       isDark ? "text-DText" : "text-LText"
-                    } text-H font-bold px-[10px]  tablet:text-SH pl-[20px]`}
+                    } text-H font-bold px-[10px]  tablet:text-SH pl-[20px] tablet:pl-[0px]`}
                   >
                     작업 기여도
                   </span>
                   <ul
-                    className={`h-auto w-full flex flex-col gap-2 pl-6 pt-6 ${
+                    className={`h-auto w-full flex flex-col gap-2 tablet:pl-0 tablet:pt-2 tablet:text-[12px] pt-6 ${
                       isDark ? "border-white" : "border-black"
-                    } `}
+                    } list-disc `}
                   >
                     {projectData[idx].modalFirstli?.map((item, idx) => {
                       return (
                         <li
-                          className={` ${
+                          className={` ml-[10px] ${
                             isDark ? "text-DText" : "text-LText"
-                          } list-disc`}
+                          } `}
                           key={idx}
                         >
                           {item}
@@ -130,12 +130,12 @@ const IsModal = () => {
                     <span
                       className={`${
                         isDark ? "text-DText" : "text-LText"
-                      } text-H font-bold px-[10px] mb-3 tablet:text-SH pl-[20px]`}
+                      } text-H font-bold px-[10px] mb-3 tablet:text-SH pl-[20px] tablet:pl-[0px]`}
                     >
                       Trouble Shooting
                     </span>
                     <ul
-                      className={`h-auto w-full flex flex-col gap-2 pl-6 pt-2  ${
+                      className={`h-auto w-full flex flex-col gap-2 tablet:pl-[0px] pt-2  ${
                         isDark ? "border-white" : "border-black"
                       } `}
                     >
@@ -167,7 +167,7 @@ const IsModal = () => {
               </article>
             </div>
           </section>
-          <aside className=" tablet:flex-row tablet:left-[80px] tablet:right-[auto] tablet:h-auto tablet:w-full tablet:justify-start  tablet:gap-2  min-w-[60px] z-50 h-full gap-4  fixed  flex flex-col justify-start items-center right-[80px] top-[70px]">
+          <aside className=" tablet:flex-row tablet:left-[3%] tablet:top-[50px] tablet:right-[auto] tablet:h-auto tablet:w-full tablet:justify-start  tablet:gap-2  min-w-[60px] z-50 h-full gap-4  fixed  flex flex-col justify-start items-center right-[80px] top-[70px]">
             <button
               onClick={() => setIsModal(!isModal)}
               className="bg-DMainPurple  hover:text-DMainPurple hover:border-DMainPurple cursor-pointer flex justify-center items-center rounded-full w-[40px] h-[40px] text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 font-mono"
