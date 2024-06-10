@@ -46,8 +46,6 @@ export const BackTagArr: string[] = ["Express", "Mongo", "Mongoose"];
 
 export const EtcTagArr: string[] = ["Figma", "Github"];
 
-export const imgSrc: string[] = [];
-
 export const projectData: TProjectData[] = [
   {
     header: "My_Todo_Calender",
@@ -75,7 +73,7 @@ export const projectData: TProjectData[] = [
       "검색 기능을 통해 일정 이름과 태그를 검색할 수 있습니다.",
     ],
     modalP:
-      "Back-End와 Front-End를 같이 제작한 프로젝트입니다. Front-End 실력을 키우긴 위해서는 백엔드에서도 어떤 씩으로 작업을 하는지에 대한 이해가 필요하다고 생각을 해서 Express를 이용하여 프로젝트를 진행을 하였습니다.",
+      "Back-End와 Front-End를 같이 제작한 프로젝트입니다. Front-End 실력을 키우기 위해서는 백엔드에서도 어떤 식으로 작업을 하는지에 대한 이해가 필요하다고 생각해서 Express를 이용하여 프로젝트를 진행하였습니다.",
     modalFirstli: [
       "figma를 이용한 화면 설계",
       "Date-fns와 Date-picker 라이브러리를 이용한 날짜 선택 기능",
@@ -129,7 +127,7 @@ export const projectData: TProjectData[] = [
       "메뉴를 통해 해당 위치로 Scroll이 가능합니다.",
     ],
     modalP:
-      "이전 버전의 포트폴리오 사이트이고, 가독성과 좀 더 나은 UX를 제공하기 위해 지금 보시는 페이지로 리펙토링 하였습니다.",
+      "이전 버전의 포트폴리오 사이트이고, 노션, PPT 등 제한적인 양식이 아닌 저만의 양식을 가진 포트폴리오를 가지기 위해 제작하였습니다.",
     modalFirstli: [
       "figma를 이용한 화면 설계",
       "나만의 포트폴리오를 만들어 보기 위해서 제작",
@@ -177,7 +175,7 @@ export const projectData: TProjectData[] = [
       siteLink: "http://main22.s3-website.ap-northeast-2.amazonaws.com/",
     },
     modalP:
-      "Front-end & Back-end 협업 프로젝트이며, 한 달정도의 시간을 걸쳐 제작을 하였고, 첫 OpenApi를 사용하여 만든 프로젝트입니다.",
+      "Front-end & Back-end 협업 프로젝트이며, 한 달 정도의 시간을 걸쳐 제작하였고, 첫 OpenAPI를 사용하여 만든 프로젝트입니다.",
     modalFirstli: [
       "Front-end & Back-end 협업 프로젝트",
       "figma를 이용한 화면 설계",
