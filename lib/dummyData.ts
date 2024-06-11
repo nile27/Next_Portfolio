@@ -48,6 +48,61 @@ export const EtcTagArr: string[] = ["Figma", "Github"];
 
 export const projectData: TProjectData[] = [
   {
+    header: "Mingyu's Portfolio",
+    date: "2024.06.01 ~ 2024.06.06 (6일)",
+    team: "개인",
+    skill: [
+      "NextJS",
+      "Figma",
+      "TypeScript",
+      "Recoil",
+      "Styled-Components",
+      "Tailwind CSS",
+    ],
+    imgSrc: [
+      "https://github.com/nile27/Next_Portfolio/assets/114140840/1a6ee811-59f3-4376-90fc-f8895552c315",
+      "https://github.com/nile27/Next_Portfolio/assets/114140840/520466fa-d2e2-4bc0-a0a8-de35e262c6dd",
+      "https://github.com/nile27/Next_Portfolio/assets/114140840/e258b5a3-2f0b-4f07-9c5c-a69429cc8406",
+      "https://github.com/nile27/Next_Portfolio/assets/114140840/f4ba4813-e5f5-4fbf-aeaa-32d9d1409ae5",
+      "https://github.com/nile27/Next_Portfolio/assets/114140840/4e1ab3cc-7417-4436-9837-9e959388bb46",
+      "https://github.com/nile27/Next_Portfolio/assets/114140840/23d21330-33c5-45df-ae37-b919907288a1",
+      "https://github.com/nile27/Next_Portfolio/assets/114140840/59c8f42b-4610-4b26-83c9-bf6e3f3e2a08",
+    ],
+    introText: [
+      "저 만의 양식으로 만든 포트폴리오입니다.",
+      "다크/라이트 모드 구현",
+      "Modal 창을 사용해 가독성 향상 (자세히 보기)",
+      "UI가 이전 버전보다 더 눈에 잘 띄도록 애니메이션 효과를 사용",
+    ],
+    modalP: `"가독성이 매우 부족하고", "눈에 잘 띄지 않는다"라는 피드백을 받고 새로 제작한 포트폴리오입니다.`,
+    modalFirstli: [
+      "figma를 이용한 화면 설계",
+      "shadcn/UI를 이용하여, 개발하는 시간 단축 (캐러셀, 드롭다운 메뉴)",
+      "Button, Intro 등 애니메이션 효과를 통해 눈에 더 띄도록 제작",
+      "Tailwind CSS를 통해 다크/라이트 모드 구현",
+      "Modal 창을 이용해 너무 많은 글을 방지하여 가독성 향상",
+      "Vercel의 자동화 배포 기능을 통해 유지 보수 향상",
+    ],
+    modalSecondli: [
+      {
+        troble:
+          "브라우저의 호환성 문제로 인해 버그 발생 - grid-template-columns",
+        fix: "사파리에서 grid 부분이 깨지는 현상이 있어, flex와 flex-wrap을 이용해서 버그 수정",
+      },
+      {
+        troble: "브라우저의 호환성 문제로 인해 버그 발생 - font",
+        fix: "버튼의 글자를 조금 더 눈에 잘 띄게 만들기 위해 폰트를 따로 사용했지만 Edge 웹 브라우저에서 폰트를 지원하지 않아, Noto Sans KR로 변경",
+      },
+    ],
+    Link: {
+      gitLink: "https://github.com/nile27/Next_Portfolio",
+      figmaLink:
+        "https://www.figma.com/design/qZze2sAfNDqL95ranIaSfr/Untitled?node-id=0-1&t=slBmJx0GDgf6fumO-0",
+      siteLink: "https://mingyu-portfolio.vercel.app/",
+    },
+    modalTag: ["솔로", "New_Portfolio", "사이드 프로젝트"],
+  },
+  {
     header: "My_Todo_Calender",
     date: "2024.02 ~ 2024.03 (5주)",
     team: "개인",
