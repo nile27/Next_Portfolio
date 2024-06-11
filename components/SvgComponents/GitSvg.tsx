@@ -25,7 +25,7 @@ const GitSvg = (props: TMainButton) => {
       {...restBtnProps}
       className={` min-w-[100px] textBoxHalf:min-w-[40px]
       bg-DMainPurple hover:bg-white hover:text-DMainPurple hover:border-DMainPurple
-      w-auto px-1 h-[40px] text-Sm cursor-pointer flex justify-center items-center rounded-lg text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 font-mono
+      w-auto px-1 h-[40px] text-Sm cursor-pointer flex justify-center items-center rounded-lg text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 
        ${isDark ? "text-DText" : "text-LText"}  border-b-[1px] ${
         isDark ? "border-gray-200" : "border-gray-900"
       } rounded-lg shadow-sm gap-x-2 ${

@@ -48,7 +48,7 @@ const ThemeToggleButton = () => {
         onClick={handleTheme}
         className={cn(
           buttonVariants({ color }),
-          `cursor-pointer flex justify-center items-center rounded-full tablet:w-[30px] tablet:h-[30px] w-[50px] h-[50px] text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 font-mono`
+          `cursor-pointer flex justify-center items-center rounded-full tablet:w-[30px] tablet:h-[30px] w-[50px] h-[50px] text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 `
         )}
       >
         {isDark ? (
@@ -61,7 +61,7 @@ const ThemeToggleButton = () => {
         onClick={handleScroll}
         className={cn(
           buttonVariants({ color }),
-          `cursor-pointer flex justify-center items-center rounded-full tablet:w-[30px] tablet:h-[30px] w-[50px] h-[50px] text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 font-mono`
+          `cursor-pointer flex justify-center items-center rounded-full tablet:w-[30px] tablet:h-[30px] w-[50px] h-[50px] text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 `
         )}
       >
         <Image
