@@ -14,7 +14,7 @@ const SkillTag = (props: TSkillTag) => {
     <div
       className={` ${
         isDark ? "bg-DBg" : "bg-LBg"
-      } gap-2 flex flex-col justify-center items-center w-auto h-full p-[10px] rounded-lg hover:border-[1px] hover:scale-105 duration-150 hover:ring-1 `}
+      } gap-2 flex flex-col justify-center max-h-[100px] items-center w-auto h-full p-[10px] rounded-lg hover:border-[1px] hover:scale-105 duration-150 hover:ring-1 `}
     >
       <Image
         src={`/Img/Skill_${posi}/${text}.svg`}
