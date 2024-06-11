@@ -21,6 +21,10 @@
   }
 }
 
+button:hover {
+  outline: none;
+}
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -31,6 +35,7 @@ body {
   position: relative;
 }
 div {
+  outline: none;
   background-color: transparent;
 }
 
