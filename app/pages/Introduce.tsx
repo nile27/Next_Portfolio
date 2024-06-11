@@ -114,7 +114,7 @@ const Introduce = () => {
           </span>
         </div>
         <button
-          className={` bottom-[5%] tablet:left-[45%] left-[47%] absolute z-[20]  cursor-pointer bg-transparent px-3 py-2 rounded-md ${
+          className={` bottom-[3%] tablet:left-[45%] left-[47%] absolute z-[20]  cursor-pointer bg-transparent px-3 py-2 rounded-md ${
             isDark ? "text-white" : "text-LMainPurple"
           }  animate-bounce cursor-default`}
         >
