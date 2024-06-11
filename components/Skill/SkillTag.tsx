@@ -16,13 +16,15 @@ const SkillTag = (props: TSkillTag) => {
         isDark ? "bg-DBg" : "bg-LBg"
       } gap-2 flex flex-col justify-center min-w-[100px] min-h-[100px] max-w-[120px]  items-center w-auto h-full p-[10px] rounded-lg hover:border-[1px] hover:scale-105 duration-150 hover:ring-1 `}
     >
-      <Image
-        src={`/Img/Skill_${posi}/${text}.svg`}
-        alt="typescript"
-        width={25}
-        height={25}
-        priority
-      />
+      <div className="h-[25px] w-[25px] overflow-hidden">
+        <Image
+          src={`/Img/Skill_${posi}/${text}.svg`}
+          alt="typescript"
+          width={25}
+          height={25}
+          priority
+        />
+      </div>
       <span
         className={` w-full ${
           isDark ? "text-DText" : "text-LText"
