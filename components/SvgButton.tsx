@@ -44,7 +44,7 @@ const SvgButton = (props: TMainButton) => {
       </svg>
       <span
         className={`inline-block align-text-bottom h-[30px] ${
-          size === "SH" ? "text-[24px] tablet:text-[2.5vw]" : "text-[16px]"
+          size === "SH" ? "text-[24px] tablet:text-[2.5vw]" : "text-[14px]"
         } h-full ${isDark ? "text-DText" : "text-LText"} tablet:hidden`}
       >
         {children}

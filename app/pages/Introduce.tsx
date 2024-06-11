@@ -37,7 +37,7 @@ const Introduce = () => {
             >
               Contact
             </h1>
-            <SvgButton style="email" onClick={copyToClipboard}>
+            <SvgButton style="email" size="md" onClick={copyToClipboard}>
               ddj03104@gmail.com
             </SvgButton>
           </div>
@@ -47,7 +47,7 @@ const Introduce = () => {
                 isDark ? "text-DText" : "text-LText"
               } tablet:hidden `}
             >
-              My Link
+              ß My Link
             </h2>
             <div className=" flex justify-center items-start flex-col w-full gap-[2rem] tablet:flex-row tablet:justify-center tablet:w-auto ">
               <a
