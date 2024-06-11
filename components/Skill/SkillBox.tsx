@@ -16,7 +16,7 @@ const SkillBox = (props: { dataArr: string[]; posi: string; h2: string }) => {
       >
         {props.h2}
       </h2>
-      <div className="w-full h-auto grid grid-cols-[repeat(auto-fill,minmax(110px,50px))] gap-2">
+      <div className="w-full h-auto flex flex-wrap  gap-2 ">
         {props.dataArr.map((item, idx) => {
           return <SkillTag text={item} posi={props.posi} key={idx} />;
         })}
