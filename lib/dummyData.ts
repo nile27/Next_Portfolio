@@ -31,7 +31,7 @@ type TexperienceData = {
 
 export const frontTagArr: string[] = [
   "TypeScript",
-  "Javascript",
+  "JavaScript",
   "HTML",
   "CSS",
   "React",
