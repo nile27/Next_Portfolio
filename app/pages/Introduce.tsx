@@ -27,7 +27,7 @@ const Introduce = () => {
         isDark ? "bg-DBg" : "bg-LBg"
       } animate-mainAppear py-[15px] tablet:flex-col relative `}
     >
-      <aside className="flex justify-between items-start flex-col min-w-[240px] h-full p-[1rem] tablet:w-[100%] tablet:justify-between tablet:h-auto ">
+      <aside className="flex justify-between items-start flex-col min-w-[240px] h-full p-[1rem] tablet:p-0 tablet:w-[100%] tablet:justify-between tablet:h-auto ">
         <div className=" w-full flex justify-center items-start gap-[2rem] flex-col tablet:flex-row tablet:justify-center ">
           <div className=" w-full tablet:w-auto">
             <h1
@@ -75,7 +75,7 @@ const Introduce = () => {
           최근 업데이트: 2024.06.09
         </span>
       </aside>
-      <main className=" w-full h-full flex justify-center items-center gap-[2rem] flex-col relative  ">
+      <main className=" w-full h-full flex justify-center items-center tablet:justify-start tablet:pt-[calc(100vh-95vh)]  gap-[2rem] tablet:gap-[1rem] flex-col relative  ">
         <h1
           className={`${isDark ? "text-DText" : "text-LText"} text-H font-bold`}
         >
