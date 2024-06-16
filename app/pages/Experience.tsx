@@ -52,35 +52,31 @@ const Experience: React.FC = () => {
             <span className={`${isDark ? "text-DText" : "text-LText"}`}>
               2015.03 ~ 2022.08
             </span>
-            <div className=" bg-transparent flex gap-1 mobile:flex-col">
+            <div className=" bg-transparent flex gap-1 flex-col">
               <span
-                className={`text-[20px] font-bold  ${
+                className={`text-[20px] font-bold whitespace-nowrap  ${
                   isDark ? "text-DText" : "text-LText"
                 }`}
               >
                 한남대학교 (졸업)
               </span>
-              <span
-                className={`text-[20px] font-bold  mobile:hidden ${
-                  isDark ? "text-DText" : "text-LText"
-                }`}
-              >
-                {" - "}
-              </span>
-              <span
-                className={`text-[20px] font-bold  ${
-                  isDark ? "text-DText" : "text-LText"
-                }`}
-              >
-                컴퓨터통신무인기술학과
-              </span>
-              <span
-                className={`text-[20px] font-bold  ${
-                  isDark ? "text-DText" : "text-LText"
-                }`}
-              >
-                {" (컴퓨터 트랙)"}
-              </span>
+
+              <div className="flex justify-start gap-[10px] mobile:flex-col">
+                <span
+                  className={`text-[20px] font-bold whitespace-nowrap   ${
+                    isDark ? "text-DText" : "text-LText"
+                  }`}
+                >
+                  {"컴퓨터통신무인기술학과 "}
+                </span>
+                <span
+                  className={`text-[20px] font-bold  ${
+                    isDark ? "text-DText" : "text-LText"
+                  }`}
+                >
+                  {"(컴퓨터 트랙)"}
+                </span>
+              </div>
             </div>
           </div>
         </article>
