@@ -5,12 +5,12 @@ import { useRecoilValue } from "recoil";
 type TMainButton = React.ComponentProps<"button"> & {
   length?: string;
   text: string;
+  isActive: boolean;
 };
 
 const NavBtn = (props: TMainButton) => {
-  const { length, text, ...restOption } = props;
+  const { length, text, isActive, ...restOption } = props;
   const isDark = useRecoilValue(isDarkAtom);
-  const [isActive, setIsActive] = useState(false);
 
   return (
     <button
@@ -25,9 +25,13 @@ const NavBtn = (props: TMainButton) => {
         <span
           className={`${
             isDark
-              ? "text-[#4a4c53] group-hover:text-white"
-              : "text-LNav_disable group-hover:text-LText"
-          } group-after:block w-auto tablet900:text-center  group-after:transition-transform group-after:duration-[500ms] tablet900:text-[18px]  group-hover:after:scale-100`}
+              ? `text-[#4a4c53] group-hover:text-DText ${
+                  isActive && "group-after:scale-100 text-white "
+                }`
+              : `text-LNav_disable group-hover:text-LText ${
+                  isActive && "group-after:scale-100 text-LText "
+                } `
+          } group-after:block w-auto tablet900:text-center  group-after:transition-transform group-after:duration-[500ms] tablet900:text-[18px]  group-hover:after:scale-100 `}
         >
           {text}
         </span>
@@ -35,9 +39,17 @@ const NavBtn = (props: TMainButton) => {
           <div
             className={`${
               isDark
-                ? " bg-transparent group-hover:bg-DMainPurple text-[#4a4c53]"
-                : "bg-transparent group-hover:bg-DMainPurple text-LSecondBg"
-            } min-w-[36px] min-h-[36px] rounded-full text-center  group-after:transition-transform group-after:duration-[250ms] group-hover:text-white group-hover:after:scale-100 tablet900:hidden`}
+                ? `group-hover:bg-DMainPurple text-[#4a4c53] ${
+                    isActive &&
+                    "bg-DMainPurple text-white group-after:scale-100 "
+                  } `
+                : ` group-hover:bg-LMainPurple text-LSecondBg ${
+                    isActive &&
+                    "bg-LMainPurple text-white group-after:scale-100 "
+                  } `
+            } min-w-[36px] min-h-[36px] rounded-full text-center   group-after:transition-transform group-after:duration-[250ms] group-hover:text-white group-hover:after:scale-100 tablet900:hidden 
+              
+          `}
           >
             {length}
           </div>

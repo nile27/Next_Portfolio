@@ -6,19 +6,22 @@ import { contentRefsState } from "@/app/state/ContentRefs";
 
 const SideBar: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   const contentRefs = useRecoilValue<(HTMLElement | null)[]>(contentRefsState);
+  const [navIndex, setNavIndex] = useState(null);
+  const navRef = useRef<HTMLElement[]>([]);
   const navText = [
     { text: "Skill" },
     { text: "Project", length: `${projectData.length}` },
     { text: "Experience" },
     { text: "Price", length: `${Pricearr.length}` },
   ];
-  const [activeSection, setActiveSection] = useState<number | null>(null);
+  const [activeSection, setActiveSection] = useState<boolean[]>(
+    Array.from([true, false, false, false])
+  );
 
   function scrollFunc(
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     text: string
   ): void {
-    const event: HTMLElement = e.target as HTMLButtonElement;
     const name: string = text;
     const menu: { [key: string]: number } = {
       Skill: 0,
@@ -39,6 +42,31 @@ const SideBar: React.FC<{ isDark: boolean }> = ({ isDark }) => {
     }
   }
 
+  // 0, 887 , 4388, 6366
+
+  useEffect(() => {
+    const changeNavBtnStyle = () => {
+      contentRefs.forEach((ref, idx) => {
+        if (
+          typeof ref?.offsetTop === "number" &&
+          Math.floor(document.documentElement.scrollTop) >
+            Math.floor(ref?.offsetTop) + Math.floor(window.innerHeight * 0.6)
+        ) {
+          let changeArr = Array.from({ length: 4 }, () => false);
+          changeArr[idx] = true;
+          setActiveSection([...changeArr]);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", changeNavBtnStyle);
+    return () => {
+      window.removeEventListener("scroll", changeNavBtnStyle);
+    };
+  }, [contentRefs]);
+
+  useEffect(() => {}, []);
+
   return (
     <section
       className={` tablet900:hidden   flex flex-col justify-start items-start min-w-[150px] max-w-[200px] h-full  relative ${
@@ -57,6 +85,7 @@ const SideBar: React.FC<{ isDark: boolean }> = ({ isDark }) => {
               key={idx}
               length={item.length}
               onClick={(e) => scrollFunc(e, item.text)}
+              isActive={activeSection[idx]}
             />
           ))}
         </div>
