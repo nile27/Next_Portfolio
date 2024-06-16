@@ -15,7 +15,7 @@ const SideBar: React.FC<{ isDark: boolean }> = ({ isDark }) => {
     { text: "Price", length: `${Pricearr.length}` },
   ];
   const [activeSection, setActiveSection] = useState<boolean[]>(
-    Array.from([true, false, false, false])
+    Array.from({ length: 4 }, () => false)
   );
 
   function scrollFunc(

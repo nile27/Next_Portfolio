@@ -10,7 +10,7 @@ import { isTimeAtom } from "../state/isTimeAtom";
 const copyToClipboard = async () => {
   try {
     await navigator.clipboard.writeText("ddj03104@gmail.com");
-    alert("클립보드에 복사되었습니다.");
+    alert("이메일이 복사되었습니다.");
   } catch (error) {
     console.error(error);
   }
