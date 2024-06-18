@@ -252,9 +252,9 @@ export const projectData: TProjectData[] = [
 
 export const experienceData: TexperienceData[] = [
   {
-    header: "코드스테이츠",
-    header2: "FrontEnd 과정: (수료)",
-    date: "2015.03 ~ 2022.08",
+    header: "코드스테이츠 _ FrontEnd 과정",
+    header2: "수료",
+    date: "2022.12 ~ 2023.06",
     Learn: [
       "JavaScript 기반 프론트엔드 과정 ",
       "HTML5 / CSS3를 이용한 웹 개발",
