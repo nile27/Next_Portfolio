@@ -252,6 +252,19 @@ export const projectData: TProjectData[] = [
 
 export const experienceData: TexperienceData[] = [
   {
+    header: "스나이퍼팩토리 _ 프로젝트 캠프:Next.js 1기",
+    header2: "진행중",
+    date: "2024.06 ~ 2024.08",
+    Learn: [
+      "Next.js 기반 프론트엔드 과정 ",
+      "TypeScript, Next.js를 통한 웹 개발",
+      "기업 연계 팀 프로젝트",
+      "현재 진행 중인 팀 프로젝트는 아직 허락받지 못해 포트폴리오에 기술을 제외했습니다.",
+    ],
+
+    team: [],
+  },
+  {
     header: "코드스테이츠 _ FrontEnd 과정",
     header2: "수료",
     date: "2022.12 ~ 2023.06",

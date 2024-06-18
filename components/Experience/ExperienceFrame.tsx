@@ -82,13 +82,15 @@ const ExperienceFrame = () => {
                 </ul>
               </div>
               <div className=" flex flex-col w-full h-auto mt-[10px] ">
-                <h3
-                  className={` text-SH font-bold ${
-                    isDark ? "text-DThirdColor" : "text-LThirdColor"
-                  }`}
-                >
-                  Activity
-                </h3>
+                {item.team.length !== 0 && (
+                  <h3
+                    className={` text-SH font-bold ${
+                      isDark ? "text-DThirdColor" : "text-LThirdColor"
+                    }`}
+                  >
+                    Activity
+                  </h3>
+                )}
                 <div className=" flex flex-col w-full h-auto p-[10px] ">
                   {item.team.map((item, idx) => {
                     return (
