@@ -256,7 +256,7 @@ export const experienceData: TexperienceData[] = [
     header2: "진행중",
     date: "2024.06 ~ 2024.08",
     Learn: [
-      "Next.js 기반 프론트엔드 과정 ",
+      "Next.js 기반 프론트엔드 과정",
       "TypeScript, Next.js를 통한 웹 개발",
       "기업 연계 팀 프로젝트",
       "현재 진행 중인 팀 프로젝트는 아직 허락받지 못해 포트폴리오에 기술을 제외했습니다.",
@@ -269,7 +269,7 @@ export const experienceData: TexperienceData[] = [
     header2: "수료",
     date: "2022.12 ~ 2023.06",
     Learn: [
-      "JavaScript 기반 프론트엔드 과정 ",
+      "JavaScript 기반 프론트엔드 과정",
       "HTML5 / CSS3를 이용한 웹 개발",
       "React 프레임워크를 통한 웹 개발",
       "약 200개 정도의 JavaScript 알고리즘 문제 풀이",
