@@ -11,7 +11,7 @@ type TProjectData = {
   Link: {
     gitLink: string;
     figmaLink?: string;
-    siteLink: string;
+    siteLink?: string;
   };
   modalTag: string[];
 };
@@ -227,7 +227,7 @@ export const projectData: TProjectData[] = [
     Link: {
       gitLink: "https://github.com/nile27/Eaaaaaaats_refectoring",
       figmaLink: undefined,
-      siteLink: "http://main22.s3-website.ap-northeast-2.amazonaws.com/",
+      siteLink: undefined,
     },
     modalP:
       "Front-end & Back-end 협업 프로젝트이며, 한 달 정도의 시간을 걸쳐 제작하였고, 첫 OpenAPI를 사용하여 만든 프로젝트입니다.",
