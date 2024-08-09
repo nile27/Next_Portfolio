@@ -48,6 +48,67 @@ export const EtcTagArr: string[] = ["Figma", "Github"];
 
 export const projectData: TProjectData[] = [
   {
+    header: "Aight Now",
+    date: "2024.06.24 ~ 2024.08.02 (5주)",
+    team: "3명",
+    skill: [
+      "NextJS",
+      "Figma",
+      "TypeScript",
+      "Zustand",
+      "Next-Auth",
+      "Tailwind CSS",
+      "Firebase",
+      "DeepL",
+      "Puppeteer",
+      "Tavily",
+      "Together AI",
+      "LangChain",
+    ],
+    imgSrc: [
+      "https://github.com/user-attachments/assets/bf3334a6-19a6-4918-b35e-94f34f25914a",
+      "https://github.com/user-attachments/assets/cae3cf9d-b764-45ad-9ece-71f01672148c",
+      "https://github.com/user-attachments/assets/d5556c28-d93b-4958-bdc2-d6e1663cd6d0",
+      "https://github.com/user-attachments/assets/9d7c3830-351e-4da8-ab07-0b5fdadd2d02",
+      "https://github.com/user-attachments/assets/00a527c8-9618-43e6-a189-4e37983058f0",
+      "https://github.com/user-attachments/assets/d92951f8-22af-4d16-b98d-abd88c9ea981",
+      "https://github.com/user-attachments/assets/685092f1-d969-4689-bb0e-afe118acd2f0",
+    ],
+    introText: [
+      "저 만의 양식으로 만든 포트폴리오입니다.",
+      "다크/라이트 모드 구현",
+      "Modal 창을 사용해 가독성 향상 (자세히 보기)",
+      "UI가 이전 버전보다 더 눈에 잘 띄도록 애니메이션 효과를 사용",
+    ],
+    modalP:
+      "실시간 미국 기업 공시와 데일리 뉴스 데이터를 분석해 다양한 언어로 맞춤형 기업 분석 리포트를 제공하는 AI 애널리스트 플랫폼",
+    modalFirstli: [
+      "figma를 이용한 화면 설계",
+      "shadcn/UI를 이용하여, 개발하는 시간 단축 (캐러셀, 드롭다운 메뉴)",
+      "Button, Intro 등 애니메이션 효과를 통해 눈에 더 띄도록 제작",
+      "Tailwind CSS를 통해 다크/라이트 모드 구현",
+      "Modal 창을 이용해 너무 많은 글을 방지하여 가독성 향상",
+      "Vercel의 자동화 배포 기능을 통해 유지 보수 향상",
+    ],
+    modalSecondli: [
+      {
+        troble:
+          "브라우저의 호환성 문제로 인해 버그 발생 - grid-template-columns",
+        fix: "사파리에서 grid 부분이 깨지는 현상이 있어, flex와 flex-wrap을 이용해서 버그 수정",
+      },
+      {
+        troble: "브라우저의 호환성 문제로 인해 버그 발생 - font",
+        fix: "버튼의 글자를 조금 더 눈에 잘 띄게 만들기 위해 폰트를 따로 사용했지만 Edge 웹 브라우저에서 폰트를 지원하지 않아, Noto Sans KR로 변경",
+      },
+    ],
+    Link: {
+      gitLink: "https://github.com/nile27/Spacspace_AightNow",
+
+      siteLink: "https://nextjs-1st-team-7.vercel.app/",
+    },
+    modalTag: ["팀 프로젝트", "스나이퍼 팩토리", "Spac-Space", "AI", "주식"],
+  },
+  {
     header: "Mingyu's Portfolio",
     date: "2024.06.01 ~ 2024.06.06 (6일)",
     team: "개인",
@@ -230,7 +291,7 @@ export const projectData: TProjectData[] = [
       siteLink: undefined,
     },
     modalP:
-      "Front-end & Back-end 협업 프로젝트이며, 한 달 정도의 시간을 걸쳐 제작하였고, 첫 OpenAPI를 사용하여 만든 프로젝트입니다.",
+      "Front-end & Back-end 협업 프로젝트이며, 한 달 정도의 시간을 걸쳐 제작하였고, 첫 OpenAPI를 사용하여 만든 프로젝트입니다. 현재는 유지 비용이 많이 들어 배포사이트는 중단된 상태입니다.",
     modalFirstli: [
       "Front-end & Back-end 협업 프로젝트",
       "figma를 이용한 화면 설계",

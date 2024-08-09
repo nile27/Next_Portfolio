@@ -87,9 +87,9 @@ const IsModal = () => {
                   <span
                     className={`${
                       isDark ? "text-DText" : "text-LText"
-                    } text-H font-bold pl-[20px] pb-4 tablet:text-SH`}
+                    } text-H font-bold pl-[20px] pb-2 tablet:text-SH`}
                   >
-                    사용 기술
+                    🛠️ 사용 기술
                   </span>
                   <div className="flex gap-3 justify-start flex-wrap ">
                     {projectData[idx].skill.map((item, idx) => {
@@ -107,10 +107,37 @@ const IsModal = () => {
                       isDark ? "text-DText" : "text-LText"
                     } text-H font-bold px-[10px]  tablet:text-SH pl-[20px] tablet:pl-[0px]`}
                   >
-                    작업 기여도
+                    🛠️ 사이트 기능
                   </span>
                   <ul
-                    className={`h-auto w-full flex flex-col gap-2 tablet:pl-0 tablet:pt-2  pt-6 ${
+                    className={`h-auto w-full flex flex-col gap-2 tablet:pl-0 tablet:pt-2  pt-3 ${
+                      isDark ? "border-white" : "border-black"
+                    } list-disc `}
+                  >
+                    {projectData[idx].introText?.map((item, idx) => {
+                      return (
+                        <li
+                          className={` ml-[10px] mobile:text-[14px] ${
+                            isDark ? "text-DText" : "text-LText"
+                          } `}
+                          key={idx}
+                        >
+                          {item}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+                <div className="flex flex-col pt-6 gap-2  w-full">
+                  <span
+                    className={`${
+                      isDark ? "text-DText" : "text-LText"
+                    } text-H font-bold px-[10px]  tablet:text-SH pl-[20px] tablet:pl-[0px]`}
+                  >
+                    🛠️ 작업 기여도
+                  </span>
+                  <ul
+                    className={`h-auto w-full flex flex-col gap-2 tablet:pl-0 tablet:pt-2  pt-3 ${
                       isDark ? "border-white" : "border-black"
                     } list-disc `}
                   >
@@ -136,10 +163,10 @@ const IsModal = () => {
                         isDark ? "text-DText" : "text-LText"
                       } text-H font-bold px-[10px] mb-3 tablet:text-SH pl-[20px] tablet:pl-[0px]`}
                     >
-                      Trouble Shooting
+                      ⛔️ Trouble Shooting
                     </span>
                     <ul
-                      className={` h-auto w-full flex flex-col gap-2 tablet:pl-[0px] pt-2  ${
+                      className={` h-auto w-full flex flex-col gap-2 tablet:pl-[0px]  ${
                         isDark ? "border-white" : "border-black"
                       } `}
                     >
@@ -147,7 +174,7 @@ const IsModal = () => {
                         return (
                           <div key={idx}>
                             <li
-                              className={`mobile:text-[14px] ${
+                              className={`mobile:text-[14px], mb-3 ${
                                 isDark
                                   ? "text-DText bg-DSecondBg"
                                   : "text-LText bg-LSecondBg"
