@@ -42,13 +42,14 @@ export const frontTagArr: string[] = [
   "SCSS",
 ];
 
-export const BackTagArr: string[] = ["Express", "Mongo", "Mongoose"];
+export const BackTagArr: string[] = ["Express", "Mongoose"];
+export const DBTagArr: string[] = ["Mongo", "Firebase"];
 
 export const EtcTagArr: string[] = ["Figma", "Github"];
 
 export const projectData: TProjectData[] = [
   {
-    header: "Aight Now",
+    header: "Aight Now - AI기반 주식분석플랫폼 ",
     date: "2024.06.24 ~ 2024.08.02 (5주)",
     team: "3명",
     skill: [
@@ -75,20 +76,19 @@ export const projectData: TProjectData[] = [
       "https://github.com/user-attachments/assets/685092f1-d969-4689-bb0e-afe118acd2f0",
     ],
     introText: [
-      "저 만의 양식으로 만든 포트폴리오입니다.",
-      "다크/라이트 모드 구현",
-      "Modal 창을 사용해 가독성 향상 (자세히 보기)",
-      "UI가 이전 버전보다 더 눈에 잘 띄도록 애니메이션 효과를 사용",
+      "해외 주식 정보 조회 - ( 애플, 아마존, 구글, MS, 테슬라 )",
+      "AI 분석을 리포트를 통해 그래프와 수치를 확인할 수 있습니다. - (수익성, 성장성, 관심, 전체적 평가 등)",
+      "각 종목들의 최신 뉴스 제공 - ( 네이버 뉴스 크롤링 )",
+      "뉴스 기사를 사용자가 원하는 언어로 번역 - ( 영어, 일본어, 중국어, 프랑스어 )",
+      "ChatBot을 통해 간단한 주식 종목에 설명을 볼 수 있습니다.",
     ],
-    modalP:
-      "실시간 미국 기업 공시와 데일리 뉴스 데이터를 분석해 다양한 언어로 맞춤형 기업 분석 리포트를 제공하는 AI 애널리스트 플랫폼",
+    modalP: `"스나이퍼 팩토리 - 프로젝트 캠프:Next.js" 라는 Next.js 교육 프로그램을 통해 제작하였습니다. "스펙 스페이스" 라는 기업을 통해 "AI기반 주식분석플랫폼" 이라는 과제를 받고 6개의 기업 주식을, AI를 통해 분석하고 보여주는, 기업 분석 리포트 사이트를 제작하였습니다.`,
     modalFirstli: [
-      "figma를 이용한 화면 설계",
-      "shadcn/UI를 이용하여, 개발하는 시간 단축 (캐러셀, 드롭다운 메뉴)",
-      "Button, Intro 등 애니메이션 효과를 통해 눈에 더 띄도록 제작",
-      "Tailwind CSS를 통해 다크/라이트 모드 구현",
-      "Modal 창을 이용해 너무 많은 글을 방지하여 가독성 향상",
-      "Vercel의 자동화 배포 기능을 통해 유지 보수 향상",
+      "Login, Sign Up, 번역 기능 담당",
+      "Firebase를 이용하여 일반 로그인 & 회원가입, Google 소셜 로그인 구현",
+      "이메일을 통한 본인 인증 & 비밀번호 찾기",
+      "Next-Auth를 이용하여 Kakao, Naver의 소셜 로그인 구현",
+      "DeepL Open API를 이용하여 뉴스 기사 번역 기능 구현",
     ],
     modalSecondli: [
       {
@@ -106,7 +106,7 @@ export const projectData: TProjectData[] = [
 
       siteLink: "https://nextjs-1st-team-7.vercel.app/",
     },
-    modalTag: ["팀 프로젝트", "스나이퍼 팩토리", "Spac-Space", "AI", "주식"],
+    modalTag: ["팀 프로젝트", "Sniper-Factory", "Sfac-Space", "AI", "주식"],
   },
   {
     header: "Mingyu's Portfolio",
@@ -314,16 +314,24 @@ export const projectData: TProjectData[] = [
 export const experienceData: TexperienceData[] = [
   {
     header: "스나이퍼팩토리 _ 프로젝트 캠프:Next.js 1기",
-    header2: "진행중",
+    header2: "수료",
     date: "2024.06 ~ 2024.08",
     Learn: [
       "Next.js 기반 프론트엔드 과정",
       "TypeScript, Next.js를 통한 웹 개발",
       "기업 연계 팀 프로젝트",
-      "현재 진행 중인 팀 프로젝트는 아직 허락받지 못해 포트폴리오에 기술을 제외했습니다.",
     ],
 
-    team: [],
+    team: [
+      {
+        header: "AightNow _ (AI기반 주식분석플랫폼)",
+        semiHeader: "프로젝트 캠프:Next.js - Team Project",
+        list: [
+          "담당: 로그인/회원 가입, 소셜 로그인, 뉴스 기사 번역",
+          "Next.js를 이용한 Full-Stack 프로젝트",
+        ],
+      },
+    ],
   },
   {
     header: "코드스테이츠 _ FrontEnd 과정",
