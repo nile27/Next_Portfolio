@@ -92,18 +92,24 @@ export const projectData: TProjectData[] = [
     ],
     modalSecondli: [
       {
-        troble:
-          "브라우저의 호환성 문제로 인해 버그 발생 - grid-template-columns",
+        troble: "Firebase-Admin 서비스 키 인증 문제",
         fix: "사파리에서 grid 부분이 깨지는 현상이 있어, flex와 flex-wrap을 이용해서 버그 수정",
       },
       {
-        troble: "브라우저의 호환성 문제로 인해 버그 발생 - font",
+        troble: "Next-Auth 세션으로 인한 자동 로그인 문제",
+        fix: "버튼의 글자를 조금 더 눈에 잘 띄게 만들기 위해 폰트를 따로 사용했지만 Edge 웹 브라우저에서 폰트를 지원하지 않아, Noto Sans KR로 변경",
+      },
+      {
+        troble: "뉴스 기사 크롤링 태그 형식 저장으로 인한 문자열 번역 문제",
+        fix: "버튼의 글자를 조금 더 눈에 잘 띄게 만들기 위해 폰트를 따로 사용했지만 Edge 웹 브라우저에서 폰트를 지원하지 않아, Noto Sans KR로 변경",
+      },
+      {
+        troble: "본인 인증 리다이렉트 Page 문제",
         fix: "버튼의 글자를 조금 더 눈에 잘 띄게 만들기 위해 폰트를 따로 사용했지만 Edge 웹 브라우저에서 폰트를 지원하지 않아, Noto Sans KR로 변경",
       },
     ],
     Link: {
       gitLink: "https://github.com/nile27/Spacspace_AightNow",
-
       siteLink: "https://nextjs-1st-team-7.vercel.app/",
     },
     modalTag: ["팀 프로젝트", "Sniper-Factory", "Sfac-Space", "AI", "주식"],
