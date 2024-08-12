@@ -89,6 +89,7 @@ export const projectData: TProjectData[] = [
       "이메일을 통한 본인 인증 & 비밀번호 찾기",
       "Next-Auth를 이용하여 Kakao, Naver의 소셜 로그인 구현",
       "DeepL Open API를 이용하여 뉴스 기사 번역 기능 구현",
+      "Firebase을 이용한 자동 로그인",
     ],
     modalSecondli: [
       {
