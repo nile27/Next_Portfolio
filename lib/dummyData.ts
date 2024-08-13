@@ -327,6 +327,7 @@ export const experienceData: TexperienceData[] = [
     Learn: [
       "Next.js 기반 프론트엔드 과정",
       "TypeScript, Next.js를 통한 웹 개발",
+      "Next.js API Routes를 이용한 백엔드 교육",
       "기업 연계 팀 프로젝트",
     ],
 
