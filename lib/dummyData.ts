@@ -54,7 +54,7 @@ export const projectData: TProjectData[] = [
     team: "3명",
     skill: [
       "NextJS",
-      "Figma",
+
       "TypeScript",
       "Zustand",
       "Next-Auth",
@@ -94,19 +94,20 @@ export const projectData: TProjectData[] = [
     modalSecondli: [
       {
         troble: "Firebase-Admin 서비스 키 인증 문제",
-        fix: "사파리에서 grid 부분이 깨지는 현상이 있어, flex와 flex-wrap을 이용해서 버그 수정",
+        fix: "Firebase-Admin 키인 json 파일을 base64로 인코딩 한 후 직접 env에 추가하여 디코딩 후 사용",
       },
       {
-        troble: "Next-Auth 세션으로 인한 자동 로그인 문제",
-        fix: "버튼의 글자를 조금 더 눈에 잘 띄게 만들기 위해 폰트를 따로 사용했지만 Edge 웹 브라우저에서 폰트를 지원하지 않아, Noto Sans KR로 변경",
+        troble:
+          "Next-Auth 세션으로 인한 자동 로그인 문제 - (자동 로그인을 체크하지 않아도 자동 로그인 기능 활성화)",
+        fix: "Next-Auth의 세션 유효기간을 짧게 설정하고, Firebase의 로그인 유지 기능으로 변경하여 문제 해결",
       },
       {
         troble: "뉴스 기사 크롤링 태그 형식 저장으로 인한 문자열 번역 문제",
-        fix: "버튼의 글자를 조금 더 눈에 잘 띄게 만들기 위해 폰트를 따로 사용했지만 Edge 웹 브라우저에서 폰트를 지원하지 않아, Noto Sans KR로 변경",
+        fix: "jsdom 라이브러리를 이용하여 태그들의 텍스트 값만 추출하여 번역하고, 번역된 문자로 대처하여 다시 보내는 백엔드 기능으로 문제 해결",
       },
       {
         troble: "본인 인증 리다이렉트 Page 문제",
-        fix: "버튼의 글자를 조금 더 눈에 잘 띄게 만들기 위해 폰트를 따로 사용했지만 Edge 웹 브라우저에서 폰트를 지원하지 않아, Noto Sans KR로 변경",
+        fix: "회원가입, 비밀번호 찾기 등 이메일을 이용한 본인 인증 시, Firebase의 한 가지의 redirect 페이지만 설정이 가능하여 자체 redirect 페이지에서 param을 이용해서 원하는 페이지로 redirect 할 수 있는 redirect Page 제작하여 문제 해결",
       },
     ],
     Link: {
