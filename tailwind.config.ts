@@ -108,7 +108,7 @@ const config: Config = {
       },
       screens: {
         mobile: { max: "600px" },
-        tablet: { max: "700px" },
+        tablet: { max: "800px" },
         tablet900: { max: "900px" },
         textBoxHalf: { max: "1170px" },
       },
