@@ -198,7 +198,7 @@ const IsModal = () => {
               </article>
             </div>
           </section>
-          <aside className=" tablet:flex-row tablet:left-[5%] tablet:top-[50px] tablet:right-[auto] tablet:h-auto tablet:w-full tablet:justify-start  tablet:gap-2  min-w-[60px] z-50 h-full gap-4  fixed  flex flex-col justify-start items-center right-[7%] top-[70px]">
+          <aside className=" tablet:flex-row tablet:left-[5%] tablet:top-[50px] tablet:right-[auto] tablet:h-auto tablet:w-full tablet:justify-start  tablet:gap-2  min-w-[60px] z-50 h-full gap-4  fixed  flex flex-col justify-start items-center right-[9%] top-[70px]">
             <button
               onClick={() => setIsModal(!isModal)}
               className="bg-DMainPurple  hover:text-DMainPurple hover:border-DMainPurple cursor-pointer flex justify-center items-center rounded-full w-[40px] h-[40px] text-white tracking-wider shadow-xl hover:border-[1px] hover:scale-105 duration-300 hover:ring-1 "
