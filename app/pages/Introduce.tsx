@@ -59,15 +59,6 @@ const Introduce = () => {
                   Github
                 </SvgButton>
               </a>
-              <a
-                href="https://velog.io/@nile27/posts"
-                target="_blank"
-                className="w-full h-auto"
-              >
-                <SvgButton style="velog" size="SH">
-                  Blog
-                </SvgButton>
-              </a>
             </div>
           </div>
         </div>
