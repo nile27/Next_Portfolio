@@ -181,8 +181,8 @@ export const projectData: TProjectData[] = [
       "TypeScript",
       "Redux-toolkit",
       "Styled-Components",
-      "Node.js",
-      "Express.js",
+
+      "ExpressJS",
       "Mongo DB",
     ],
     imgSrc: [
@@ -197,7 +197,7 @@ export const projectData: TProjectData[] = [
       "검색 기능을 통해 일정 이름과 태그를 검색할 수 있습니다.",
     ],
     modalP:
-      "Back-End와 Front-End를 같이 제작한 프로젝트입니다. Front-End 실력을 키우기 위해서는 백엔드에서도 어떤 식으로 작업을 하는지에 대한 이해가 필요하다고 생각해서 Express를 이용하여 프로젝트를 진행하였습니다.",
+      "Back-End와 Front-End를 같이 제작한 프로젝트입니다. Front-End 실력을 키우기 위해서는 백엔드에서도 어떤 식으로 작업을 하는지에 대한 이해가 필요하다고 생각해서 ExpressJS를 이용하여 프로젝트를 진행하였습니다.",
     modalFirstli: [
       "figma를 이용한 화면 설계",
       "Date-fns와 Date-picker 라이브러리를 이용한 날짜 선택 기능",
@@ -226,7 +226,7 @@ export const projectData: TProjectData[] = [
         "https://www.figma.com/design/xTzUSN4KQhBr6LU5IobyZ9/Calender?node-id=0-1&t=Q1zDg41vWQs5A3dD-0",
       siteLink: "https://cheery-moonbeam-28829d.netlify.app/",
     },
-    modalTag: ["솔로", "Full-Stack 프로젝트", "사이드 프로젝트", "PostMan"],
+    modalTag: ["솔로", "풀스택 프로젝트", "사이드 프로젝트"],
   },
   {
     header: "Portfolio_(구 버전)",
