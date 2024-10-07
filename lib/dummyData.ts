@@ -6,7 +6,7 @@ type TProjectData = {
   introText: string[];
   team: string;
   modalP?: string;
-  testID?: string[];
+  testID?: { id: string; pw: string };
   modalFirstli?: string[];
   modalSecondli?: { troble: string; fix: string }[];
   Link: {
@@ -84,7 +84,7 @@ export const projectData: TProjectData[] = [
       "뉴스 기사를 사용자가 원하는 언어로 번역 - ( 영어, 일본어, 중국어, 프랑스어 )",
       "ChatBot을 통해 간단한 주식 종목에 설명을 볼 수 있습니다.",
     ],
-    testID: ["test1234", "test1234"],
+    testID: { id: "test1234", pw: "test1234" },
     modalP: `"스나이퍼 팩토리 - 프로젝트 캠프:Next.js" 라는 Next.js 교육 프로그램을 통해 제작하였습니다. "스팩 스페이스" 라는 기업을 통해 "AI기반 주식분석플랫폼" 이라는 과제를 받고 6개의 기업 주식을, AI를 통해 분석하고 보여주는, 기업 분석 리포트 사이트를 제작하였습니다.`,
     modalFirstli: [
       "Login, Sign Up, 번역 기능 담당",

@@ -79,7 +79,7 @@ const IsModal = () => {
                     isDark ? "border-DSecondBg" : "border-LSecondBg"
                   }  `}
                 >
-                  {projectData[idx].testID && (
+                  {projectData[idx].testID?.id && (
                     <div
                       className={`flex flex-row w-full justify-start items-center gap-2 ${
                         isDark ? "text-DText" : "text-LText"
@@ -98,14 +98,14 @@ const IsModal = () => {
                           isDark ? "text-DText" : "text-LText"
                         } text-Md `}
                       >
-                        ID: {projectData[idx].testID[0]}
+                        ID: {projectData[idx].testID?.id}
                       </span>
                       <span
                         className={`${
                           isDark ? "text-DText" : "text-LText"
                         } text-Md `}
                       >
-                        PW: {projectData[idx].testID[1]}
+                        PW: {projectData[idx].testID?.pw}
                       </span>
                     </div>
                   )}
