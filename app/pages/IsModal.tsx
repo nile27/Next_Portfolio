@@ -75,10 +75,40 @@ const IsModal = () => {
                   <CarouselBox idx={idx} width={700} height={350} />
                 </div>
                 <div
-                  className={`flex justify-center items-center w-[80%] p-6 border-b-[1px] mb-5 ${
+                  className={`flex flex-col justify-center items-center w-[80%] p-6 border-b-[1px] mb-5 ${
                     isDark ? "border-DSecondBg" : "border-LSecondBg"
                   }  `}
                 >
+                  {projectData[idx].testID && (
+                    <div
+                      className={`flex flex-row w-full justify-start items-center gap-2 ${
+                        isDark ? "text-DText" : "text-LText"
+                      } text-SH font-bold pb-2 `}
+                    >
+                      ⭐️
+                      <span
+                        className={` items-center ${
+                          isDark ? "text-DText" : "text-LText"
+                        } text-Md `}
+                      >
+                        테스트 계정 -
+                      </span>
+                      <span
+                        className={` items-center ${
+                          isDark ? "text-DText" : "text-LText"
+                        } text-Md `}
+                      >
+                        ID: {projectData[idx].testID[0]}
+                      </span>
+                      <span
+                        className={`${
+                          isDark ? "text-DText" : "text-LText"
+                        } text-Md `}
+                      >
+                        PW: {projectData[idx].testID[1]}
+                      </span>
+                    </div>
+                  )}
                   <p className={` ${isDark ? "text-DText" : "text-LText"}`}>
                     {projectData[idx].modalP}
                   </p>
