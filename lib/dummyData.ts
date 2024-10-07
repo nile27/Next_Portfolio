@@ -77,7 +77,6 @@ export const projectData: TProjectData[] = [
       "https://github.com/user-attachments/assets/685092f1-d969-4689-bb0e-afe118acd2f0",
     ],
     introText: [
-      "test계정 - ID: test1234, PW: test1234",
       "해외 주식 정보 조회 - ( 애플, 아마존, 구글, MS, 테슬라 )",
       "AI 분석을 리포트를 통해 그래프와 수치를 확인할 수 있습니다. - (수익성, 성장성, 관심, 전체적 평가 등)",
       "각 종목들의 최신 뉴스 제공 - ( 네이버 뉴스 크롤링 )",
