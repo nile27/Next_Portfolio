@@ -114,7 +114,7 @@ export const projectData: TProjectData[] = [
     ],
     Link: {
       gitLink: "https://github.com/nile27/Spacspace_AightNow",
-      siteLink: "https://nextjs-1st-team-7.vercel.app/",
+      siteLink: "https://spacspace-aight-now.vercel.app/",
     },
     modalTag: ["팀 프로젝트", "Sniper-Factory", "Sfac-Space", "AI", "주식"],
   },
